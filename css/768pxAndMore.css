@@ -1,0 +1,229 @@
+@import "http://webfonts.ru/import/opensans.css";
+@import "http://webfonts.ru/import/roboto.css";
+@import "http://webfonts.ru/import/kelson.css";
+
+body{
+	background-color: #d7d7d7;
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+
+p {
+	text-align: justify;
+}
+
+.fp-tableCell{
+	vertical-align: baseline;
+}
+#mainSection{
+	height:auto;
+	width: auto;
+	padding: 0;
+}
+
+
+
+
+/*HEADER*/
+
+#responsive-menu img{
+	float: left;
+	height: auto;
+	max-width: 100%;
+	display:block;
+}
+
+.navbar-default{
+	background-color: transparent;
+	border: 0;
+	margin-bottom: 0;
+
+}
+
+
+#navLeft {
+	float:left;
+}
+#navLeft  li a{
+	margin-right: 5px;
+	color: #fff;
+	padding: 0 15px 0 5px;
+	margin-top: 15px;
+	border-left: 3px solid rgba(0,0,0, 0);
+	margin-left: 7px;
+}
+
+
+
+
+#navLeft .active a,
+#navLeft .active a:focus,
+#navLeft .active a:hover{
+	background-color: transparent !important;
+border-left: 3px solid #f1c54b !important;
+ }
+
+
+
+
+#navbarLang{
+	background-color: #fff;
+    margin-left: 0;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #616262;
+    padding: 5px 15px;
+    float: right;
+}
+
+
+#navbarMain{
+	margin-left: 30px !important;
+}
+
+
+
+/*НАВИГАЦИЯ*/
+#fp-nav span{
+	background-color: #fff !important;
+}
+
+
+
+
+
+/*CЕКЦИЯ 1*/
+
+#section1{
+	background-image: url(../bgSection1.png);
+	background-position: center;
+	padding: 0px;
+	background-size: cover;
+	min-height: 650px;
+}
+
+
+#textSection1{
+	margin-top: 15%;
+	color: #fff;
+	margin-bottom: 10%;
+}
+#textSection1 h2{
+	margin-top: 0;
+	font-weight: 300;
+	font-size: 36px;
+}
+
+#textSection1 p{
+	text-align: center;
+	font-size: 18px;
+}
+
+#buttContacts{
+	font-size: 20px;
+	text-align: center;
+	padding-left: 0;
+}
+
+#buttContacts a{
+	border: 2px solid #f1c54b;
+	padding: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    display:block;
+}
+
+
+#buttNext{
+	font-size: 20px;
+	text-align: center;
+	padding-right: 0;
+}
+
+#buttNext a{
+	border: 2px solid #f1c54b;
+	padding: 10px;
+    font-weight: 500;
+    text-decoration: none;
+	color: #0a0b0b;	
+    display: block;
+    background-color: #f1c54b;
+}
+
+.fa-angle-right{
+	font-size: 20px;
+	padding-left: 10px;
+	color: #0a0b0b;	
+	font-weight: bold;
+}
+
+/*СЕКЦИЯ 2*/
+#section2{
+	background-image: url(../bgSection2.png);
+	background-position: center;
+	padding: 0px;
+	background-size: cover;
+	min-height: 650px;
+}
+
+#section2 .headerSection2{
+	text-align: center;
+	color: #fff;
+	
+}
+
+
+#section2 p,
+.textSection2 h3,
+.weCanSection2 h3,
+.weCanSection2 ul{
+	visibility: hidden;	
+}
+#section2 h2{
+	font-weight: 300;
+	margin-top: 100px;
+	font-size: 25px;
+	border-bottom: 4px solid #f1c54b;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+.textSection2 .col-md-6{
+	padding-right: 130px;
+	color: #fff;
+}
+
+.weCanSection2 ul li{
+	list-style:none;	
+}
+
+.weCanSection2 h3{
+	text-align: center;
+}
+
+#leftUl ul{
+	padding-left: 130px;
+	font-size: 17px;
+}
+
+#rightUl ul{
+	padding: 0;
+	font-size: 17px;
+}
+
+.fa-check{
+	font-size: 18px;
+	color: #f1c54b;
+	margin-right: 10px;
+}
+
+#downButt2{
+	text-align: center;
+}
+
+#downButt2 .fa-angle-double-down{
+	font-size: 40px;
+	padding-top: 50px;
+	color: #0f1010;
