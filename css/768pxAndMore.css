@@ -13,19 +13,32 @@ p {
 	text-align: justify;
 }
 
-.fp-tableCell{
-	display: inline-block;
-}
 #mainSection{
 	height:auto;
 	width: auto;
 	padding: 0;
 }
 
+h2{
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.downButt{  
+position: absolute; 
+bottom: 0;
+font-size: 50px;
+color: #fff; 
+right: 49%;
+}
 
 
 
 /*HEADER*/
+
+#header{
+	margin-top: 15px;
+}
 
 #responsive-menu img{
 	float: left;
@@ -106,14 +119,12 @@ border-left: 3px solid #f1c54b !important;
 
 
 #textSection1{
-	margin-top: 15%;
+	margin-top: 188px;
 	color: #fff;
-	margin-bottom: 10%;
+	margin-bottom: 180px;
 }
 #textSection1 h2{
 	margin-top: 0;
-	font-weight: 300;
-	font-size: 36px;
 }
 
 #textSection1 p{
@@ -182,9 +193,7 @@ border-left: 3px solid #f1c54b !important;
 	visibility: hidden;	
 }
 #section2 h2{
-	font-weight: 300;
 	margin-top: 10%;
-	font-size: 36px;
 	border-bottom: 2px solid #f1c54b;
 	display: inline-block;
 	padding-bottom: 5px;
@@ -194,10 +203,8 @@ border-left: 3px solid #f1c54b !important;
 #section2 ul li{
 	list-style:none;	
 }
-
-#section3 h3{
-	font-size: 23px;
-	padding-left: 
+.weCanSection2 {
+	margin-bottom: 50px;
 }
 
 .textSection2 p{
@@ -229,14 +236,6 @@ border-left: 3px solid #f1c54b !important;
 	margin-right: 10px;
 }
 
-.fa-angle-down{
-	font-size: 50px;
-	color: #fff;
-}
-
-#downButt2{
-	margin-top: 3%;
-}
 
 
 
