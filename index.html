@@ -1,196 +1,218 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sandbox</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sandbox</title>
 
+  <!--Bootstrap-->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!--Bootstrap-->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!--Animate.css-->
+  <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 
+  <!--LightCase-->
+  <link rel="stylesheet" href="bower_components/lightcase/src/css/lightcase.css">
 
-    
-    <!--Animate.css-->
-    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+  <!--FULLPAGE-->
+  <link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.css">
 
-    
-    <!--LightCase-->
-    <link rel="stylesheet" href="bower_components/lightcase/src/css/lightcase.css">
+  <!--Medeia-->
+  <link rel="stylesheet" media="screen and (min-width:768px)" href="css/768pxAndMore.css" />
 
+  <!--FONTS-->
+  <link rel="stylesheet" href="font-awesome.min.css">
 
-
-    <!--FULLPAGE-->
-    <link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.css">
-
-
-
-    <!--Medeia-->
-    <link rel="stylesheet" media="screen and (min-width:768px)" href="css/768pxAndMore.css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+</head>
+<body>
   <div class="container-fluid" id="header">
-       <div class="row">
-          <div class="navbar navbar-default navbar-fixed-top">
-              <div class="container">
+   <div class="row">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
 
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle"  id="but-menu"data-toggle="collapse" data-target="#responsive-menu">
-                          <span class="sr-only">Открыть навигацию</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                    </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle"  id="but-menu"data-toggle="collapse" data-target="#responsive-menu">
+            <span class="sr-only">Открыть навигацию</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
 
-                    <div class="collapse navbar-collapse" id="responsive-menu">
-                      <div class="row">
+        <div class="collapse navbar-collapse" id="responsive-menu">
+          <div class="row">
 
-                        <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
+            <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
 
-                          <div class="col-sm-12 col-md-12 col-lg-12 ">
-                          <a href="#"><img src="logo.png" class="img-responsive" alt="logo"></a>
-                          
-                          <ul class="nav navbar-nav" id="navLeft">
-                            <li data-menuanchor="firstSection"><a href="#firstSection"  id="navbarMain">Главная</a></li>
-                            <li data-menuanchor="secondSection"><a href="#secondSection"  id="navbarAbout">О нас</a></li>
-                            <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Услуги</a></li>
-                            <li data-menuanchor="4rdSection"><a href="#4rdSection"  id="navbarPortfolio">Портфолио</a></li>
-                            <li data-menuanchor="5rdSection"><a href="#5rdSection"  id="navbarContacts">Контакты</a></li>
-                          </ul>
+              <div class="col-sm-12 col-md-12 col-lg-12 ">
+                <a href="#"><img src="logo.png" class="img-responsive" alt="logo"></a>
 
-                          <a href="#" id="navbarLang">Рус|Eng</a>
+                <ul class="nav navbar-nav" id="navLeft">
+                  <li data-menuanchor="firstSection"><a href="#firstSection"  id="navbarMain">Главная</a></li>
+                  <li data-menuanchor="secondSection"><a href="#secondSection"  id="navbarAbout">О нас</a></li>
+                  <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Услуги</a></li>
+                  <li data-menuanchor="4rdSection"><a href="#4rdSection"  id="navbarPortfolio">Портфолио</a></li>
+                  <li data-menuanchor="5rdSection"><a href="#5rdSection"  id="navbarContacts">Контакты</a></li>
+                </ul>
 
-                        </div>
-                        </div>
-
-                      </div>
-                    </div>
+                <a href="#" id="navbarLang">Рус|Eng</a>
 
               </div>
+            </div>
+
           </div>
+        </div>
+
       </div>
+    </div>
   </div>
+</div>
 <section class="container-fluid" id="mainSection">
 
   <section id="section1" class="section" >
     <div class="container-fluid">
-              <div class="row" id="mainfirst">
-                <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 text-center" id="textSection1">
-                  <h2 >Разработка современных веб-приложений</h2>
-                  <p>Мы любим то, что делаем, получаем удовольствие от каждого проекта.<br>Мы создаем современные, оригинальные и смелые проекты.</p>
-                </div>
-              </div>
-              <div class="row">
+      <div class="row" id="mainfirst">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 text-center" id="textSection1">
+          <h2>Разработка современных веб-приложений</h2>
+          <p>Мы любим то, что делаем, получаем удовольствие от каждого проекта.<br>Мы создаем современные, оригинальные и смелые проекты.</p>
+        </div>
+      </div>
+      <div class="row">
 
-                <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
-                  <div class="col-sm-6 col-md-6 col-lg-6" id="buttContacts">
-                    <a href="#5rdSection">Связаться с нами</a>
-                  </div>
-                  <div class="col-sm-6 col-md-6 col-lg-6" id="buttNext">
-                    <a href="#secondSection">Далее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
+          <div class="col-sm-6 col-md-6 col-lg-6" id="buttContacts">
+            <a href="#5rdSection">Связаться с нами</a>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6" id="buttNext">
+            <a href="#secondSection">Далее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
 
-              </div>
-            </div>
+      </div>
+    </div>
   </section>
   <section id="section2" class="section">
 
     <div class="container">
 
-      <div class="row headerSection2" >
-          <div class="col-md-12 col-lg-12">
-              <h2>О нас</h2>
-          </div>
+      <div class="row headerSection2">
+        <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 text-center">
+          <h2 class="h2WithLine">О нас</h2>
+        </div>
       </div>
 
       <div class="row textSection2" >
-           <div class="col-md-6 col-lg-6">
-            <h3 class="animated">Lorem ipsum dolor sit amet.</h3>
-            <p class="animated">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, delectus, minima. Obcaecati, animi maiores blanditiis reprehenderit soluta atque aliquid. Expedita dolore dignissimos mollitia totam reprehenderit odio, nisi ab sapiente porro ipsa cumque cupiditate eos labore consequuntur ratione animi nulla dolores nam soluta debitis! Veniam a hic incidunt omnis voluptatibus obcaecati.</p>
-          </div>
+       <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
+        <h3 class="animated">SANDBOX DEVELEPMENT</h3>
+        <p class="animated">Предоставляет полный спектр  услуг по профессиональной разработке web  приложений, а также, сайтов любого  уровня сложности и комплексному продвижению в интернете, с использованием самых передовых технологий.В своей работе, мы ориентируемся, прежде всего, на удовлетворение потребностей наших клиентов, высокое качество разработки и дизайна, а также, эффективное ведение рекламных кампаний. </p>
       </div>
-
-
-      <div class="row weCanSection2" >
-       <div class="col-md-6 col-lg-6"></div>
-       
-          <div class="col-md-6 col-lg-6">
-            <h3 class="animated">Что мы умеем?</h3>
-
-            <div class="col-md-6 col-lg-6" id="leftUl">
-            <ul class="animated">
-              <li><i class="fa fa-check" aria-hidden="true"></i>Web Design</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>HTML/CSS</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>JavaScript</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>PHP/Java</li>
-            </ul>
-            </div>
-
-            <div class="col-md-6 col-lg-6" id="rightUl">
-            <ul class="animated">
-              <li><i class="fa fa-check" aria-hidden="true"></i>Branding & Logo Design</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>Social Media Marketing</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>Wordpress</li>
-              <li><i class="fa fa-check" aria-hidden="true"></i>SEO</li>
-            </ul>
-            </div>
-
-          </div>
-      </div>
-  
-          <div class="row" id="downButt2">
-            <a href="#3rdSection"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-          </div>
-
     </div>
 
-  </section>
-  <section id="section3" class="section"></section>
-  <section id="section4" class="section"></section>
-  <section id="section5" class="section"></section>
+
+    <div class="row weCanSection2" >
+
+      <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-6 col-lg-offset-6 col-sm-offset-6" id="idForBord">
+        <h3 class="animated">ЧТО МЫ УМЕЕМ</h3>
+
+        <div class="col-md-6 col-lg-6" id="leftUl">
+          <ul class="animated">
+            <li><i class="fa fa-check" aria-hidden="true"></i>Веб Дизайн</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>HTML/CSS</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>JavaScript</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>PHP/Java</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6" id="rightUl">
+          <ul class="animated">
+            <li><i class="fa fa-check" aria-hidden="true"></i>Брэндинг</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Spring</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Wordpress</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>SEO</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row text-center" id="downButt2">
+      <a href="#3rdSection"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+    </div>
+
+  </div>
+
+</section>
+<section id="section3" class="section"></section>
+<section id="section4" class="section">
+  <div class="mainDiv">
+    <div class="headerSection text-center">
+      <h2 class="h2WithLine">Наши услуги</h2>
+    </div>
+    <p>В основе наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво»<br> просто так — мы делаем «красиво», которое зарабатывает вам деньги.
+    </p>
+    <div id="rowDiv">
+      <div>
+        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+        <p>Веб-разработка</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
+      </div>
+      <div>
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <p>Безопасность</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
+      </div>
+      <div>
+        <i class="fa fa-paint-brush" aria-hidden="true"></i>
+        <p>Дизайн</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
+      </div>
+      <div>
+        <i class="fa fa-area-chart" aria-hidden="true"></i>
+        <p>Продвижение</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center downButt" id="downButt4">
+    <a href="#5rdSection"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+  </div>
+</section>
+<section id="section5" class="section"></section>
+<section id="section6" class="section"></section>
 
 </section>
 
 
-      <!--Jquery-->
-      <script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!--Jquery-->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 
-      <!--Bootstrap-->
-      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--Bootstrap-->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 
-      <!--LightCase-->
-      <script src="bower_components/lightcase/src/js/lightcase.js"></script>
-      <script src="bower_components/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
+<!--LightCase-->
+<script src="bower_components/lightcase/src/js/lightcase.js"></script>
+<script src="bower_components/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
 
 
-      <!--JQUERY VALID-->
-      <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+<!--JQUERY VALID-->
+<script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
 
-       <!--FULLPAGE-->
-      <script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+<!--FULLPAGE-->
+<script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
 
-       <!--SLIMSCROLL-->
-      <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-
-
-
-
-      <script src="js/libs.js"></script>
+<!--SLIMSCROLL-->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 
 
 
-  </body>
+
+<script src="js/libs.js"></script>
+
+
+
+</body>
 </html>
