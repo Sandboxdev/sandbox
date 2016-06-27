@@ -6,6 +6,7 @@ body{
 	background-color: #d7d7d7;
 	font-family: 'Roboto';
 	font-weight: 300;
+	color: #fff;
 }
 
 p {
@@ -13,7 +14,7 @@ p {
 }
 
 .fp-tableCell{
-	vertical-align: baseline;
+	display: table-cell;
 }
 #mainSection{
 	height:auto;
@@ -21,6 +22,24 @@ p {
 	padding: 0;
 }
 
+.fa{
+	font-size: 50px;
+	color: white;
+}
+
+.mainDiv{
+	width: 60%;
+	height: 100%;
+	display:block;
+	align-content: center;
+	margin: auto;
+}
+
+.downButt{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+} 
 
 
 
@@ -37,7 +56,6 @@ p {
 	background-color: transparent;
 	border: 0;
 	margin-bottom: 0;
-
 }
 
 
@@ -60,21 +78,21 @@ p {
 #navLeft .active a:focus,
 #navLeft .active a:hover{
 	background-color: transparent !important;
-border-left: 3px solid #f1c54b !important;
- }
+	border-left: 3px solid #f1c54b !important;
+}
 
 
 
 
 #navbarLang{
 	background-color: #fff;
-    margin-left: 0;
-    display: inline-block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #616262;
-    padding: 5px 15px;
-    float: right;
+	margin-left: 0;
+	display: inline-block;
+	margin-top: 10px;
+	text-decoration: none;
+	color: #616262;
+	padding: 5px 15px;
+	float: right;
 }
 
 
@@ -90,7 +108,15 @@ border-left: 3px solid #f1c54b !important;
 }
 
 
-
+/*ЗАГОЛОВОК_С_ЛИНИЕЙ*/
+.h2WithLine{
+	font-weight: 300;
+	margin-top: 10%;
+	font-size: 36px;
+	border-bottom: 2px solid #f1c54b;
+	display: inline-block;
+	padding-bottom: 5px;
+}
 
 
 /*CЕКЦИЯ 1*/
@@ -112,7 +138,7 @@ border-left: 3px solid #f1c54b !important;
 #textSection1 h2{
 	margin-top: 0;
 	font-weight: 300;
-	font-size: 36px;
+	/*font-size: 36px;*/
 }
 
 #textSection1 p{
@@ -129,10 +155,10 @@ border-left: 3px solid #f1c54b !important;
 #buttContacts a{
 	border: 2px solid #f1c54b;
 	padding: 10px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #fff;
-    display:block;
+	font-weight: 500;
+	text-decoration: none;
+	color: #fff;
+	display:block;
 }
 
 
@@ -145,11 +171,11 @@ border-left: 3px solid #f1c54b !important;
 #buttNext a{
 	border: 2px solid #f1c54b;
 	padding: 10px;
-    font-weight: 500;
-    text-decoration: none;
+	font-weight: 500;
+	text-decoration: none;
 	color: #0a0b0b;	
-    display: block;
-    background-color: #f1c54b;
+	display: block;
+	background-color: #f1c54b;
 }
 
 .fa-angle-right{
@@ -169,9 +195,7 @@ border-left: 3px solid #f1c54b !important;
 }
 
 #section2 .headerSection2{
-	text-align: center;
 	color: #fff;
-	
 }
 
 
@@ -181,36 +205,37 @@ border-left: 3px solid #f1c54b !important;
 .weCanSection2 ul{
 	visibility: hidden;	
 }
-#section2 h2{
-	font-weight: 300;
-	margin-top: 100px;
-	font-size: 25px;
-	border-bottom: 4px solid #f1c54b;
-	display: inline-block;
-	padding-bottom: 5px;
-}
 
-.textSection2 .col-md-6{
-	padding-right: 130px;
-	color: #fff;
-}
-
-.weCanSection2 ul li{
+#section2 ul li{
 	list-style:none;	
 }
 
-.weCanSection2 h3{
-	text-align: center;
+#section3 h3{
+	font-size: 23px;
+	padding-left: 
 }
 
-#leftUl ul{
-	padding-left: 130px;
-	font-size: 17px;
+.textSection2 p{
+	margin-bottom: 0;
 }
 
-#rightUl ul{
+.textSection2 div{
+	border-left: 2px solid #f1c54b;
+}
+
+#idForBord{
+	border-left: 2px solid #f1c54b;
+}
+
+#leftUl ul,#rightUl ul{
+	padding-left: 0;
+	font-size: 23px;
+	font-weight: 100;
+	margin-bottom: 0;
+}
+
+#leftUl,#rightUl{
 	padding: 0;
-	font-size: 17px;
 }
 
 .fa-check{
@@ -219,11 +244,63 @@ border-left: 3px solid #f1c54b !important;
 	margin-right: 10px;
 }
 
+.fa-angle-down{
+	font-size: 50px;
+	color: #fff;
+}
+
 #downButt2{
+	margin-top: 3%;
+}
+
+
+
+/*СЕКЦИЯ 3*/
+#section3{
+	background-image: url(../bgSection3.png);
+	background-position: center;
+	padding: 0px;
+	background-size: cover;
+	min-height: 650px;
+}
+
+
+/*СЕКЦИЯ 4*/
+#section4{
+	background-image: url(../bgSection4.png);
+	background-position: center;
+	padding: 0px;
+	background-size: cover;
+	min-height: 650px;
+}
+
+#section4 i{
+	padding-bottom: 30px;
+}
+
+#section4 p{
+	text-align: center;
+	font-size: 18px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#section4 h2{
+	margin-bottom: 30px;
+}
+
+#rowDiv{
+	padding-top: 50px;
+	padding-bottom: 40px;
+	width: 80%;
+	margin: auto;
+}
+
+#rowDiv div{
+	width: 25%;
+	float: left;
+	min-height: 100%;
 	text-align: center;
 }
 
-#downButt2 .fa-angle-double-down{
-	font-size: 40px;
-	padding-top: 50px;
-	color: #0f1010;
+
