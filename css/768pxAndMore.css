@@ -6,25 +6,39 @@ body{
 	background-color: #d7d7d7;
 	font-family: 'Roboto';
 	font-weight: 300;
+	color: #fff;
 }
 
 p {
 	text-align: justify;
 }
 
-.fp-tableCell{
-	vertical-align: baseline;
-}
 #mainSection{
 	height:auto;
 	width: auto;
 	padding: 0;
 }
 
+h2{
+	font-size: 36px;
+	font-weight: 300;
+}
+
+.downButt{  
+position: absolute; 
+bottom: 0;
+font-size: 50px;
+color: #fff; 
+right: 49%;
+}
 
 
 
 /*HEADER*/
+
+#header{
+	margin-top: 15px;
+}
 
 #responsive-menu img{
 	float: left;
@@ -105,14 +119,12 @@ border-left: 3px solid #f1c54b !important;
 
 
 #textSection1{
-	margin-top: 15%;
+	margin-top: 188px;
 	color: #fff;
-	margin-bottom: 10%;
+	margin-bottom: 180px;
 }
 #textSection1 h2{
 	margin-top: 0;
-	font-weight: 300;
-	font-size: 36px;
 }
 
 #textSection1 p{
@@ -169,7 +181,6 @@ border-left: 3px solid #f1c54b !important;
 }
 
 #section2 .headerSection2{
-	text-align: center;
 	color: #fff;
 	
 }
@@ -182,35 +193,41 @@ border-left: 3px solid #f1c54b !important;
 	visibility: hidden;	
 }
 #section2 h2{
-	font-weight: 300;
-	margin-top: 100px;
-	font-size: 25px;
-	border-bottom: 4px solid #f1c54b;
+	margin-top: 10%;
+	border-bottom: 2px solid #f1c54b;
 	display: inline-block;
 	padding-bottom: 5px;
 }
 
-.textSection2 .col-md-6{
-	padding-right: 130px;
-	color: #fff;
-}
 
-.weCanSection2 ul li{
+#section2 ul li{
 	list-style:none;	
 }
-
-.weCanSection2 h3{
-	text-align: center;
+.weCanSection2 {
+	margin-bottom: 50px;
 }
 
-#leftUl ul{
-	padding-left: 130px;
-	font-size: 17px;
+.textSection2 p{
+	margin-bottom: 0;
 }
 
-#rightUl ul{
+.textSection2 div{
+	border-left: 2px solid #f1c54b;
+}
+
+#idForBord{
+	border-left: 2px solid #f1c54b;
+}
+
+#leftUl ul,#rightUl ul{
+	padding-left: 0;
+	font-size: 23px;
+	font-weight: 100;
+	margin-bottom: 0;
+}
+
+#leftUl,#rightUl{
 	padding: 0;
-	font-size: 17px;
 }
 
 .fa-check{
@@ -219,11 +236,14 @@ border-left: 3px solid #f1c54b !important;
 	margin-right: 10px;
 }
 
-#downButt2{
-	text-align: center;
-}
 
-#downButt2 .fa-angle-double-down{
-	font-size: 40px;
-	padding-top: 50px;
-	color: #0f1010;
+
+
+/*СЕКЦИЯ 3*/
+#section3{
+	background-image: url(../bgSection3.png);
+	background-position: center;
+	padding: 0px;
+	background-size: cover;
+	min-height: 650px;
+}
