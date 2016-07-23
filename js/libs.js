@@ -20,15 +20,20 @@ $(document).ready(function(){
 					$('.weCanSection2 h3,.weCanSection2 ul').addClass('fadeInRight');
 					
 					
-			} 
-			 
-			if(link == "3rdSection") {
+				} 
 
+				if(link == "3rdSection") {
 
-			} 
-		}
+				} 
+			}
+
+		});
+
+	$('#togler-button').click(function(){
+		$('#togler-button-bg').toggleClass('off');
+		$('#rus').toggleClass('rus_off');
+		$('#eng').toggleClass('eng_on');
 
 	});
-
 	
 });

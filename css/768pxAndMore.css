@@ -1,49 +1,74 @@
 @import "http://webfonts.ru/import/opensans.css";
 @import "http://webfonts.ru/import/roboto.css";
 @import "http://webfonts.ru/import/kelson.css";
+@font-face {
+	font-family: Roboto-Light; /* Гарнитура шрифта */
+	src: url(../fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+	font-family: Intro; /* Гарнитура шрифта */
+	src: url(../fonts/Intro.otf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+	font-family: Roboto-Medium; /* Гарнитура шрифта */
+	src: url(../fonts/Roboto-Medium.ttf); /* Путь к файлу со шрифтом */
+}
 
 body{
 	background-color: #d7d7d7;
-	font-family: 'Roboto';
-	font-weight: 300;
+	font-family: 'Roboto Light';
 	color: #fff;
+	font-size: 1.8em;
+	margin: 0;
 }
 
-p {
-	text-align: justify;
+.sandbox_color {
+	color: #f1c54b;
+}
+	
+.upper {
+	font-weight: 300;
+	font-size: 36px;
+	font-family: 'Intro';
+	text-transform: uppercase;
 }
 
-.fp-tableCell{
-	display: table-cell;
-}
-#mainSection{
-	height:auto;
-	width: auto;
-	padding: 0;
+.button_style {
+	width: 200px;
+	height: 45px;
+	border: 2px solid #f1c54b;
+	line-height: 43px;
+	font-family: 'Roboto Medium';
 }
 
-.fa{
-	font-size: 50px;
+.a_button {
 	color: white;
-}
-
-.mainDiv{
-	width: 60%;
-	height: 100%;
-	display:block;
-	align-content: center;
-	margin: auto;
-}
-
-.downButt{
+	display: inline-block;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
-} 
+	height: 100%;
+	text-decoration: none !important;
+}
 
+.a_button:hover, #callback_btn_2 a:hover {
+	color: black;
+	background-color: #f1c54b; 
+}
 
+.a_button:active, #callback_btn_2 a:active {
+	background-color: #d8b143; 
+}
+
+.a_button:focus, #callback_btn_2 a:focus {
+	color: white; 
+	outline: none;
+}
 
 /*HEADER*/
+
+#navLeft {
+	display: inline-block;
+	float: none;
+}
 
 #responsive-menu img{
 	float: left;
@@ -58,249 +83,582 @@ p {
 	margin-bottom: 0;
 }
 
-
-#navLeft {
-	float:left;
-}
 #navLeft  li a{
-	margin-right: 5px;
+	margin-right: 15px;
+	padding-top: 10px !important;
+	margin-left: 15px;
 	color: #fff;
-	padding: 0 15px 0 5px;
-	margin-top: 15px;
-	border-left: 3px solid rgba(0,0,0, 0);
-	margin-left: 7px;
+	padding: 0;
 }
-
-
-
 
 #navLeft .active a,
 #navLeft .active a:focus,
 #navLeft .active a:hover{
 	background-color: transparent !important;
-	border-left: 3px solid #f1c54b !important;
+	border-top: 3px solid #f1c54b !important;
+	padding-top: 7px !important;
+}
+
+/*TOGLER-BUTTON*/
+#togler-button {
+	position: relative; 
+	font-size: 20px; 
+	color: black; 
+	border: 2px solid #f1c54b;
+	padding: 2px;
+	text-align: center;
+	width: 90px;
+	height: 35px;
+	z-index: 2; 
+	cursor: pointer;
+}
+
+#rus {
+	margin-right: 2px;
+	color: black;
+}
+
+#eng {
+	margin-left: 2px;
+	color: white;
+}
+
+.rus_off {
+	color: white !important;
+	transition: all 1s ease;
+}
+
+.eng_on {
+	color: black !important;
+	transition: all 1s ease;
+}
+
+#togler-button-bg {
+	position: relative; 
+	width: 45px;
+	height: 35px;
+	top: -35px; 
+	font-size:20px; 
+	background: #f1c54b;
+	z-index: 1;
+	cursor: pointer;
+	transition: all .5s ease;
+}
+
+.off {
+	margin-left: 45px; 
 }
 
 
+/*SECTION_1*/
+
+#section1 {
+	background-image: url(../images/bgSection1.png); 
+	background-position: center;	
+	background-size: cover; 
+}
+
+/*PARALLAX*/
+
+#parallax .container-fluid {
+	position: relative;
+	height: 100%;  
+	margin: 0 auto;
+
+}
+
+.scene {
+	height: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.fill {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	left: 5%;
+	top: 5%;
+}
+
+.expand-width {
+	width: 100%;
+}
+
+/*TITLE*/
+
+#title_1s {
+	height: 217px;
+	background: rgba(0, 0, 0, 0) 
+	url("../images/main_section_border.png")
+	no-repeat scroll left top;
+	background-position: 40px 0;
+	line-height: 1.3;
+	font-size: 24px;
+	font-weight: 300;
+	font-family: 'Roboto Light';
+	padding: 25px 0 25px 0;
+}
 
 
-#navbarLang{
-	background-color: #fff;
-	margin-left: 0;
-	display: inline-block;
-	margin-top: 10px;
-	text-decoration: none;
-	color: #616262;
-	padding: 5px 15px;
+/*BUTTONS*/
+
+#buttons_1s {
+	margin-top: 20px;
+	font-weight: 500;
+}
+
+#buttons_1s .right_btn {
 	float: right;
 }
 
-
-#navbarMain{
-	margin-left: 30px !important;
+#buttons_1s .left_btn {
+	margin-left: 30px;
 }
 
+/*CALLBACK*/
 
-
-/*НАВИГАЦИЯ*/
-#fp-nav span{
-	background-color: #fff !important;
+#callback_block {
+	position: absolute; 
+	right: 100px;
+	bottom: 5px; 
+	height: 100px;
+	line-height: 100px; 
+	width: 400px;
 }
 
+#callback_block div {
+	display: inline-block;
+	vertical-align: middle;
+}
 
-/*ЗАГОЛОВОК_С_ЛИНИЕЙ*/
-.h2WithLine{
-	font-weight: 300;
-	margin-top: 10%;
+#callback_block .right_block {
+	float: right;
+	width: 200px;
+}
+
+.right_block div {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+#callback_block .left_block {
+	width: 200px;
+	background: rgba(0, 0, 0, 0) 
+	url("../images/callback_background.png")
+	no-repeat scroll left top;
+	background-position: 20px 30px;
+}
+
+#call:hover {
+	color: black; 
+} 
+
+#call:active {
+}
+
+/*SECTION_2*/
+
+#section2 {
+	background-image: url(../images/bgSection2.png); 
+	background-position: center;	
+	background-size: cover;
+}
+
+/*SECTION_3*/
+
+#section3 {
+	background-image: url(../images/Section_3/bgSection3.png); 
+	background-position: center;	
+	background-size: cover;
+}
+
+.title_3s {
 	font-size: 36px;
 	border-bottom: 2px solid #f1c54b;
-	display: inline-block;
-	padding-bottom: 5px;
-}
-
-
-/*CЕКЦИЯ 1*/
-
-#section1{
-	background-image: url(../bgSection1.png);
-	background-position: center;
-	padding: 0px;
-	background-size: cover;
-	min-height: 650px;
-}
-
-
-#textSection1{
-	margin-top: 15%;
-	color: #fff;
-	margin-bottom: 10%;
-}
-#textSection1 h2{
-	margin-top: 0;
-	font-weight: 300;
-	/*font-size: 36px;*/
-}
-
-#textSection1 p{
-	text-align: center;
-	font-size: 18px;
-}
-
-#buttContacts{
-	font-size: 20px;
-	text-align: center;
-	padding-left: 0;
-}
-
-#buttContacts a{
-	border: 2px solid #f1c54b;
-	padding: 10px;
-	font-weight: 500;
-	text-decoration: none;
-	color: #fff;
-	display:block;
-}
-
-
-#buttNext{
-	font-size: 20px;
-	text-align: center;
-	padding-right: 0;
-}
-
-#buttNext a{
-	border: 2px solid #f1c54b;
-	padding: 10px;
-	font-weight: 500;
-	text-decoration: none;
-	color: #0a0b0b;	
-	display: block;
-	background-color: #f1c54b;
-}
-
-.fa-angle-right{
-	font-size: 20px;
-	padding-left: 10px;
-	color: #0a0b0b;	
 	font-weight: bold;
+	display: inline-block;
+	margin-top: 30px;
 }
 
-/*СЕКЦИЯ 2*/
-#section2{
-	background-image: url(../bgSection2.png);
-	background-position: center;
-	padding: 0px;
-	background-size: cover;
-	min-height: 650px;
+.angle-background {
+	height: 278px;
+	width: 430px;	
+	background: rgba(0, 0, 0, 0) 
+	url("../images/Section_3/border.png")
+	no-repeat scroll left top;
+	background-position: 0 0;
+	font-family: 'Roboto Light';
+	display: inline-block;
 }
 
-#section2 .headerSection2{
+.ten_square {
+	height: 100px;
+	width: 100px;
+	border: 2px solid #f1c54b;
+	font-size: 46px;
+	line-height: 98px;
+}
+
+.right_text {
+	float: right;
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.right_text a {
+	color: #f1c54b	;
+}
+
+/*CALLBACK_FORM*/
+
+/* Стили формы */
+#callback_form {
+	width: 400px;
+	margin: 0 auto;
+	font-weight: 400;
+	display: inline-block;
+}
+
+/*Стили полей для ввода*/
+#callbackName, #callbackPhone, #callbackBody {
+	width: 100%;
+	height: 50px;
+	background: none;
+	margin-top: 25px;
+	border: 2px solid #f1c54b;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	text-indent: 15px;
+}
+
+#callbackBody {
+	height: 150px !important;
+	padding: 15px;
+	text-indent: 0;
+}
+
+/*Стили полей при клике по ним*/
+#callbackName:focus, #callbackPhone:focus,
+#callbackBody:focus {
+	outline: none;
+	border: 2px solid white;
+}
+
+/*Стили текста, выводящегося в placeholder*/
+::-webkit-input-placeholder {
+	color: white;
+}
+
+
+/*Стили для кнопки*/
+.callbackButton {
+	margin-top: 25px;
+	border: none;
+	width: 100%;
+	height: 45px;
 	color: #fff;
+	font-size: 20px;
+	font-family: 'Roboto Medium';
+	cursor: pointer;
+	background: none;
+	border: 2px solid #f1c54b;
 }
 
-
-#section2 p,
-.textSection2 h3,
-.weCanSection2 h3,
-.weCanSection2 ul{
-	visibility: hidden;	
+.callbackButton:hover,.callbackButton_main:hover,
+.callbackButton_popup:hover {
+	background: #f1c54b !important;
+	color: black;
 }
 
-#section2 ul li{
-	list-style:none;	
+.callbackButton:active,.callbackButton_main:active,
+.callbackButton_popup:active {
+	outline: none;
 }
 
-#section3 h3{
-	font-size: 23px;
-	padding-left: 
+.callbackButton:focus, .callbackButton_main:focus,
+.callbackButton_popup:focus {
+	background: #d8b143 !important;
+	outline: none;
 }
 
-.textSection2 p{
-	margin-bottom: 0;
-}
+/*SECTION4*/
 
-.textSection2 div{
-	border-left: 2px solid #f1c54b;
-}
-
-#idForBord{
-	border-left: 2px solid #f1c54b;
-}
-
-#leftUl ul,#rightUl ul{
-	padding-left: 0;
-	font-size: 23px;
-	font-weight: 100;
-	margin-bottom: 0;
-}
-
-#leftUl,#rightUl{
-	padding: 0;
-}
-
-.fa-check{
-	font-size: 18px;
-	color: #f1c54b;
-	margin-right: 10px;
-}
-
-.fa-angle-down{
-	font-size: 50px;
-	color: #fff;
-}
-
-#downButt2{
-	margin-top: 3%;
-}
-
-
-
-/*СЕКЦИЯ 3*/
-#section3{
-	background-image: url(../bgSection3.png);
-	background-position: center;
-	padding: 0px;
+#section4 {
+	background-image: url(../images/Section_4/background.png); 
+	background-position: center;	
 	background-size: cover;
-	min-height: 650px;
 }
 
+/*TITLE*/
 
-/*СЕКЦИЯ 4*/
-#section4{
-	background-image: url(../bgSection4.png);
-	background-position: center;
-	padding: 0px;
-	background-size: cover;
-	min-height: 650px;
+.title_4s {
+	height: 391px;
+	width: 800px;
+	background: rgba(0, 0, 0, 0) 
+	url("../images/Section_4/border.png")
+	no-repeat scroll left top;
+	background-position: 80px 0;
+	position: relative;
+	display: inline-block;
 }
 
-#section4 i{
-	padding-bottom: 30px;
-}
-
-#section4 p{
+.title_4s h2 {
+	line-height: 1.3;
+	font-size: 24px !important;
+	font-family: 'Roboto Light';
 	text-align: center;
-	font-size: 18px;
-	padding-left: 10px;
+}
+
+.title_4s .upper {
+	font-size: 36px;
+	font-family: 'Roboto Medium';
+	text-transform: uppercase;
+}
+
+#callback_btn_2 {
+	position: absolute; 
+	right: 0;
+	bottom: 0;
+}
+
+/*SECTION_5*/
+
+#section5 {
+	background-image: url(../images/Section_5/background.png); 
+	background-position: center;	
+	background-size: cover;
+}
+
+/*CALLBACK_FORM*/
+
+/* Стили формы */
+#callback_form_main {
+	width: 600px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+/*Стили полей для ввода*/
+#callback_form_main input{
+	width: 100%;
+	height: 50px;
+	background: none;
+	margin-top: 25px;
+	border: none;
+	border-bottom: 2px solid #f1c54b;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	text-indent: 15px;
+}
+
+/*Стили полей для ввода*/
+#callbackName_main, #callbackPhone_main, #callbackBody_main {
+	width: 100%;
+	height: 50px;
+	background: none;
+	margin-top: 25px;
+	border-bottom: 2px solid #f1c54b;
+	color: white;
+	font-size: 20px;
+	text-align: left;
+	text-indent: 15px;
+}
+
+#callbackBody_main {
+	height: 150px !important;
+	border: 2px solid #f1c54b;
+	padding: 15px;
+	text-indent: 0;
+}
+
+/*Стили полей при клике по ним*/
+#callbackName_main:focus, #callbackPhone_main:focus 
+{
+	outline: none;
+	border-bottom: 2px solid white;
+}
+
+#callbackBody_main:focus {
+	outline: none;
+	border: 2px solid white;
+}
+
+/*Стили для кнопки*/
+.callbackButton_main {
+	margin-top: 25px;
+	width: 300px;
+	height: 45px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	background: none;
+	border: 2px solid #f1c54b;
+	font-family: 'Roboto Medium';
+}
+
+/*FOOTER*/
+
+.footer {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer div {
+	width: 100%;
+}
+
+.right_border {
+	border-right: 3px solid #f1c54b;
 	padding-right: 10px;
-}
-
-#section4 h2{
-	margin-bottom: 30px;
-}
-
-#rowDiv{
-	padding-top: 50px;
-	padding-bottom: 40px;
-	width: 80%;
-	margin: auto;
-}
-
-#rowDiv div{
-	width: 25%;
-	float: left;
-	min-height: 100%;
-	text-align: center;
+	margin-right: 10px;
+	text-transform: uppercase;
 }
 
 
+/*POPUP_CALLBACK*/
+
+ #my_popup {
+ 	background-color:white;
+ 	width: 400px;
+ 	height: 600px;
+ }
+
+ .logo_popup {
+ 	display: block;
+ 	margin: 0 auto;
+ }
+
+ .content_popup {
+ 	height: 460px;
+	width: 359px;
+	margin: 0 auto;
+	background: rgba(0, 0, 0, 0) 
+	url("../images/Popup_callback/border.png")
+	no-repeat scroll left top;
+	background-position: 0 10px;
+ }
+
+ /*CALLBACK_FORM*/
+
+#my_popup {
+	position: relative;
+}
+
+/* Стили формы */
+#callback_form_popup {
+	width: 300px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+/*Стили полей для ввода*/
+#callback_form_popup input{
+	width: 100%;
+	height: 50px;
+	background: none;
+	margin-top: 35px;
+	border: none;
+	border: 2px solid #f1c54b;
+	color: black !important;
+	font-size: 20px;
+	text-align: left;
+	text-indent: 15px;
+}
+
+/*Стили полей при клике по ним*/
+#callback_form_popup input:focus 
+{
+	outline: none;
+	border: 2px solid white;
+}
+
+/*Стили для кнопки*/
+.callbackButton_popup {
+	background: white !important;
+	margin-top: 45px;
+	width: 250px;
+	height: 45px;
+	cursor: pointer;
+	display: inline-block;
+	border: 2px solid #f1c54b;
+	font-family: 'Roboto Medium';
+}
+
+.my_popup_close {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 30px;
+	height: 30px;
+	background: none;
+	border: none;
+}
+
+#callback_form_popup input::-webkit-input-placeholder {color: #989696 !important;   transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+#callback_form input::-webkit-input-placeholder,
+#callback_form_main input::-webkit-input-placeholder,
+#callbackBody_main::-webkit-input-placeholder,
+#callbackBody::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease;transition: text-indent 0.3s ease;}
+
+#callback_form_popup input::-moz-placeholder {color: #989696;transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+#callback_form input::-moz-placeholder,
+#callback_form_main input::-moz-placeholder,
+#callbackBody_main::-moz-placeholder,
+#callbackBody::-moz-placeholder {transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:-moz-placeholder {color:#989696; transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+#callback_form input:-moz-placeholder,
+#callback_form_main input:-moz-placeholder,
+#callbackBody_main:-moz-placeholder,
+#callbackBody:-moz-placeholder                  {transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:-ms-input-placeholder {color: #989696;transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+#callback_form input:-ms-input-placeholder,
+#callback_form_main input:-ms-input-placeholder,
+#callbackBody_main:-ms-input-placeholder,
+#callbackBody:-ms-input-placeholder              {transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:focus::-webkit-input-placeholder {color: black;text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+#callback_form input:focus::-webkit-input-placeholder,
+#callback_form_main input:focus::-webkit-input-placeholder,
+#callbackBody_main:focus::-webkit-input-placeholder,
+#callbackBody:focus::-webkit-input-placeholder  {text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:focus::-moz-placeholder {color:#989696;text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+#callback_form input:focus::-moz-placeholder,
+#callback_form_main input:focus::-moz-placeholder,
+#callbackBody_main:focus::-moz-placeholder,
+#callbackBody:focus::-moz-placeholder         {text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:focus:-moz-placeholder {color:#989696;text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+#callback_form input:focus:-moz-placeholder,
+#callback_form_main input:focus:-moz-placeholder,
+#callbackBody_main:focus:-moz-placeholder,
+#callbackBody:focus:-moz-placeholder            {text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+
+#callback_form_popup input:focus:-ms-input-placeholder {color:#989696;text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+#callback_form input:focus:-ms-input-placeholder,
+#callback_form_main input:focus:-ms-input-placeholder,
+#callbackBody_main:focus:-ms-input-placeholder,
+#callbackBody:focus:-ms-input-placeholder        {text-indent: 200px; transition: text-indent 0.3s ease;opacity: 0; transition: opacity 0.3s ease;}
+
+.fa-times {
+	font-size: 25px !important;
+	color: black;
+}
+
+.fa-phone {
+	margin-right: 5px;
+}
+
+.fa-angle-right {
+	margin-left: 10px;
+}

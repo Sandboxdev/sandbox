@@ -22,176 +22,243 @@
   <!--Medeia-->
   <link rel="stylesheet" media="screen and (min-width:768px)" href="css/768pxAndMore.css" />
 
-  <!--FONTS-->
-  <link rel="stylesheet" href="font-awesome.min.css">
-
 </head>
 <body>
-  <div class="container-fluid" id="header">
-   <div class="row">
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
 
+  <div class="container-fluid" id="header">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle"  id="but-menu"data-toggle="collapse" data-target="#responsive-menu">
+          <button type="button" class="navbar-toggle"  id="but-menu" data-toggle="collapse" data-target="#responsive-menu">
             <span class="sr-only">Открыть навигацию</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
         </div>
-
         <div class="collapse navbar-collapse" id="responsive-menu">
-          <div class="row">
-
-            <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
-
-              <div class="col-sm-12 col-md-12 col-lg-12 ">
-                <a href="#"><img src="logo.png" class="img-responsive" alt="logo"></a>
-
+          <div class="container-fluid">
+            <div class="row" style="padding-top:20px;padding-bottom:20px">
+              <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1">
+                <a href="#"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-9 text-center">
                 <ul class="nav navbar-nav" id="navLeft">
-                  <li data-menuanchor="firstSection"><a href="#firstSection"  id="navbarMain">Главная</a></li>
-                  <li data-menuanchor="secondSection"><a href="#secondSection"  id="navbarAbout">О нас</a></li>
-                  <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Услуги</a></li>
-                  <li data-menuanchor="4rdSection"><a href="#4rdSection"  id="navbarPortfolio">Портфолио</a></li>
+                  <li data-menuanchor="firstSection"><a href="#firstSection">Главная</a></li>
+                  <li data-menuanchor="secondSection"><a href="#secondSection"  id="navbarAbout">Услуги</a></li>
+                  <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Портфолио</a></li>
+                  <li data-menuanchor="4rdSection"><a href="#4rdSection"  id="navbarPortfolio">О нас</a></li>
                   <li data-menuanchor="5rdSection"><a href="#5rdSection"  id="navbarContacts">Контакты</a></li>
                 </ul>
-
-                <a href="#" id="navbarLang">Рус|Eng</a>
-
+              </div>
+              <!--TOGLER-BUTTON-->
+              <div class="col-lg-2 col-md-2 col-sm-2 text-center" style="height: 42px;">
+                <div style="display: inline-block; margin-top:2%;">
+                  <div id="togler-button">
+                    <span id="rus">Рус</span>
+                    <span id="eng">Eng</span>
+                  </div>
+                  <div id="togler-button-bg"></div>
+                </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   </div>
-</div>
-<section class="container-fluid" id="mainSection">
 
-  <section id="section1" class="section" >
-    <div class="container-fluid">
-      <div class="row" id="mainfirst">
-        <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 text-center" id="textSection1">
-          <h2>Разработка современных веб-приложений</h2>
-          <p>Мы любим то, что делаем, получаем удовольствие от каждого проекта.<br>Мы создаем современные, оригинальные и смелые проекты.</p>
-        </div>
+
+  <section id="mainSection">
+
+    <section class="section" id="section1">
+      <div class="container-fluid" id="parallax">
+        <ul id="scene" class="scene fill">
+          <li class="layer expand-width" data-depth="1.00">
+
+            <img src="images/parallax_1.png" class="img-responsive">
+
+          </li>
+          <li class="layer expand-width" data-depth="0.30" ><img src="images/parallax_2.png" class="img-responsive"></li>
+          <li class="layer expand-width" data-depth="0.20"><img src="images/parallax_3.png" class="img-responsive"></li>
+          <li class="layer expand-width" data-depth="0.50"><img src="images/parallax_4.png" class="img-responsive"></li>
+          <li class="layer expand-width" data-depth="0.00">
+
+            <div class="container-fluid">
+              <div style="padding: 15% 0;">
+                <div class="row">
+                  <div class="col-lg-11 col-lg-offset-1">
+                    <h2 id="title_1s">
+                      <span class="upper">
+                        разработка современных
+                      </span>
+                      <br>
+                      <span class="upper sandbox_color">
+                        веб-приложений
+                      </span>
+                      <br>
+                      <span style="display: inline-block; padding-top:10px;">
+                        Мы любим то, что делаем, получаем удовольствие от каждого проекта.
+                        <br>
+                        <span>
+                          Мы создаем современные, оригинальные и смелые проекты.
+                        </span>
+                      </span>
+                    </h2>              
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-5 col-lg-offset-1" id="buttons_1s">
+                    <div style="width: 440px;">
+                      <div class="right_btn text-center button_style">
+                        <a href="#secondSection" class="a_button"><span style="display: inline-block;">Далее<i class="fa fa-angle-right" aria-hidden="true"></i></span></a>
+                      </div>
+                      <div class="left_btn text-center button_style" id="callback_btn_1">
+                        <a href="#" class="a_button my_popup_open">Связаться с нами</a>
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="callback_block">
+                <div class="right_block">
+                  <div>
+                    +375(25)-925-13-54
+                    +375(25)-791-65-67
+                  </div>
+                </div>
+                <div class="left_block text-center" id="call">
+                  Заказать звонок
+                </div> 
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="row">
+      <div id="my_popup" style="color: #989696; font-size: 24px; font-family: 'Roboto Medium';">
+        <div style="margin: 30px 0 30px 0;">
+          <image src="images/Popup_callback/logo.png" class="logo_popup"></image>
+        </div>
+        <div class="content_popup" style="text-align: center;" >
+          <span style="display: inline-block;color:black;"><i class="fa fa-phone" aria-hidden="true"></i>+375(25)925-13-54</span>
+          <form id="callback_form_popup" action="callback_form.php" method="POST" name="callback_from">
+           <input name="name" id="callbackName_popup" maxlength="40" placeholder="Имя" required />
+           <input name="phone" type="phone" id="callbackPhone_popup" maxlength="40" placeholder="Телефон" required />
+           <input name="e-mail" id="email_popup" maxlength="40" placeholder="E-mail"/>
+           <input name="skype" type="phone" id="callbackPhone_popup" maxlength="40" placeholder="Phone"/>
+           <button class="callbackButton_popup" type="submit" form="callback_form">Отправить</button>
+         </form>
+       </div>
+       <button class="my_popup_close"><i class="fa fa-times" aria-hidden="true"></i></button>
+     </div>
+   </section>
+   <section id="section2" class="section"></section>
+   <section id="section3" class="section">
 
-        <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4 col-sm-offset-4">
-          <div class="col-sm-6 col-md-6 col-lg-6" id="buttContacts">
-            <a href="#5rdSection">Связаться с нами</a>
+    <div class="container-fluide">
+      <div class="row">
+        <div class="col-lg-5 col-lg-offset-1 col-md-6 text-center">
+          <div class="angle-background text-center">
+            <span class="title_3s">Заказывай дешевле</span>
+            <div style="height: 200px; margin: 30px 20px 30px 20px;">
+              <div class="right_text">
+                При заказе 
+                <br>
+                <a href="#">полного пакета
+                  <br>
+                  услуг</a> скидка в
+                  <br> 
+                  10%
+                </div>
+                <div class="ten_square sandbox_color">
+                  10%
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6" id="buttNext">
-            <a href="#secondSection">Далее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+          <div class="col-lg-5 col-md-6 text-center">
+            <form id="callback_form" class="callback_form_main" action="callback_form.php" method="POST" name="callback_from">
+             <input name="name" id="callbackName" maxlength="40" placeholder="Имя" required />
+             <input name="phone" type="phone" id="callbackPhone" maxlength="40" placeholder="Телефон" required />
+             <div>
+               <textarea name="body" id="callbackBody" maxlength="200" placeholder="Сообщение" required></textarea>
+             </div>
+             <button class="callbackButton" type="submit" form="callback_form">Совершить заказ</button>
+           </form>
+         </div>
+       </div>
+     </div>
+
+   </section>
+   <section id="section4" class="section">
+    <div class="container-fluide">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <div class="title_4s">
+            <h2 style="padding-top: 30px;">
+              <span class="upper sandbox_color">
+                sandbox development
+              </span>
+              <br>
+              <span style="display: inline-block; padding-top:10px;">
+                Молодая компания, которая предоставляет полный спектр услуг по профессиональной разработке web приложений, а также сайтов любого уровня сожности и комплексному продвежению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение  потребностей наших клиентов, высокое качество разработки и дизайна, а также эффективное ведение рекламынх компаний.
+              </span>
+            </h2>   
+            <div id="callback_btn_2" class="button_style text-center">
+              <a href="#" class="a_button">Связаться с нами</a>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
-  <section id="section2" class="section">
-
-    <div class="container">
-
-      <div class="row headerSection2">
-        <div class="col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 col-sm-offset-2 text-center">
-          <h2 class="h2WithLine">О нас</h2>
-        </div>
-      </div>
-
-      <div class="row textSection2" >
-       <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-2 col-lg-offset-2 col-sm-offset-2">
-        <h3 class="animated">SANDBOX DEVELEPMENT</h3>
-        <p class="animated">Предоставляет полный спектр  услуг по профессиональной разработке web  приложений, а также, сайтов любого  уровня сложности и комплексному продвижению в интернете, с использованием самых передовых технологий.В своей работе, мы ориентируемся, прежде всего, на удовлетворение потребностей наших клиентов, высокое качество разработки и дизайна, а также, эффективное ведение рекламных кампаний. </p>
-      </div>
-    </div>
-
-
-    <div class="row weCanSection2" >
-
-      <div class="col-sm-4 col-md-4 col-lg-4 col-md-offset-6 col-lg-offset-6 col-sm-offset-6" id="idForBord">
-        <h3 class="animated">ЧТО МЫ УМЕЕМ</h3>
-
-        <div class="col-md-6 col-lg-6" id="leftUl">
-          <ul class="animated">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Веб Дизайн</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>HTML/CSS</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>JavaScript</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>PHP/Java</li>
-          </ul>
-        </div>
-
-        <div class="col-md-6 col-lg-6" id="rightUl">
-          <ul class="animated">
-            <li><i class="fa fa-check" aria-hidden="true"></i>Брэндинг</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Spring</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Wordpress</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>SEO</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="row text-center" id="downButt2">
-      <a href="#3rdSection"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-    </div>
-
-  </div>
+  <section id="section5" class="section">
+    <div class="container-fluide">
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+          <form id="callback_form_main" action="callback_form.php" method="POST" name="callback_from">
+           <input name="name" id="callbackName_main" maxlength="40" placeholder="Имя" required />
+           <input name="phone" type="phone" id="callbackPhone_main" maxlength="40" placeholder="Телефон" required />
+           <div>
+             <textarea name="body" id="callbackBody_main" maxlength="200" placeholder="Сообщение" required></textarea>
+           </div>
+           <button class="callbackButton_main" type="submit" form="callback_form">Отправить</button>
+         </form>
+       </div>
+     </div>
+   </div>
+   <div class="footer">
+     <div class="contacts text-center">
+       <span style="margin-right: 20px;">
+         <span class="right_border sandbox_color">
+           почта
+         </span>
+         <span>
+           hello@sandboxdev.by
+         </span>
+       </span>
+       <span class="right_border sandbox_color">
+         телефон
+       </span>
+       <span class="right_border">+375 25 791 65 57</span>
+       <span>+375 25 925 13 54</span>
+     </div>
+     <div class="copyright text-center color_sandbox">
+       <span style="text-transform: uppercase; font-size: 12px;" class="sandbox_color">
+         &copysandbox development 2016
+       </span>
+     </div>
+   </div>
+ </section>
+ <section id="section6" class="section"></section>
 
 </section>
-<section id="section3" class="section"></section>
-<section id="section4" class="section">
-  <div class="mainDiv">
-    <div class="headerSection text-center">
-      <h2 class="h2WithLine">Наши услуги</h2>
-    </div>
-    <p>В основе наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво»<br> просто так — мы делаем «красиво», которое зарабатывает вам деньги.
-    </p>
-    <div id="rowDiv">
-      <div>
-        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-        <p>Веб-разработка</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
-      </div>
-      <div>
-        <i class="fa fa-lock" aria-hidden="true"></i>
-        <p>Безопасность</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
-      </div>
-      <div>
-        <i class="fa fa-paint-brush" aria-hidden="true"></i>
-        <p>Дизайн</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
-      </div>
-      <div>
-        <i class="fa fa-area-chart" aria-hidden="true"></i>
-        <p>Продвижение</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas rerum in laudantium, itaque fuga modi deserunt inventore non facere doloribus.</p>
-      </div>
-    </div>
-  </div>
-  <div class="row text-center downButt" id="downButt4">
-    <a href="#5rdSection"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-  </div>
-</section>
-<section id="section5" class="section"></section>
-<section id="section6" class="section"></section>
-
-</section>
-
 
 <!--Jquery-->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
-
 <!--Bootstrap-->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
 
 <!--LightCase-->
 <script src="bower_components/lightcase/src/js/lightcase.js"></script>
@@ -207,12 +274,22 @@
 <!--SLIMSCROLL-->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 
-
-
-
+<!-- PARALLAX -->
+<script src="js/parallax.min.js"></script>
 <script src="js/libs.js"></script>
+<script src="js/jquery.popupoverlay.js"></script>
+<script>
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
 
-
+  // Initialize the plugin
+  $('#my_popup').popup(
+  {
+    
+    opacity: 0.3,
+    transition: 'all 0.3s'
+  });
+</script>
 
 </body>
 </html>
