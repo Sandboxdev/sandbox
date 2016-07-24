@@ -160,32 +160,75 @@ body{
 
 /*PARALLAX*/
 
-#parallax .container-fluid {
-	position: relative;
-	height: 100%;  
-	margin: 0 auto;
-
-}
+.layer {
+  top: -20% !important;
+  left: -20% !important;
+  width: auto;
+  height: 115%;
+  overflow: hidden; }
 
 .scene {
-	height: 100%;
-	padding: 0;
-	margin: 0 auto;
+  height: 100%;
+  overflow: hidden; }
+
+#scene > .layer {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%; 
 }
 
-.fill {
-	position: absolute;
-	bottom: 5%;
-	right: 5%;
-	left: 5%;
-	top: 5%;
+.layer-header-parallax {
+  top: 0% !important;
+  left: 0% !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden; 
 }
 
-.expand-width {
-	width: 100%;
+.layer-header-parallax_main {
+  top: 0% !important;
+  left: 0% !important;
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden; 
+}
+
+
+
+ .header-parallax_1 {
+  background-image: url(../images/parallax_1.png); 
+  background-size: contain;
+}
+
+.header-parallax_2 {
+  background-image: url(../images/parallax_2.png); 
+  background-size: contain;
+}
+
+.header-parallax_3 {
+  background-image: url(../images/parallax_3.png); 
+  background-size: contain;
+}
+
+.header-parallax_4 {
+  background-image: url(../images/parallax_4.png); 
+  background-size: contain;
 }
 
 /*TITLE*/
+
+.center-vertically {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 auto;
+  left: 0;
+  right: 0; }
 
 #title_1s {
 	height: 217px;
@@ -552,14 +595,12 @@ body{
 	position: relative;
 }
 
-/* Стили формы */
 #callback_form_popup {
 	width: 300px;
 	margin: 0 auto;
 	display: inline-block;
 }
 
-/*Стили полей для ввода*/
 #callback_form_popup input{
 	width: 100%;
 	height: 50px;
@@ -573,14 +614,12 @@ body{
 	text-indent: 15px;
 }
 
-/*Стили полей при клике по ним*/
 #callback_form_popup input:focus 
 {
 	outline: none;
 	border: 2px solid white;
 }
 
-/*Стили для кнопки*/
 .callbackButton_popup {
 	background: white !important;
 	margin-top: 45px;
