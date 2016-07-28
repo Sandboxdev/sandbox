@@ -1,6 +1,7 @@
 @import "http://webfonts.ru/import/opensans.css";
 @import "http://webfonts.ru/import/roboto.css";
 @import "http://webfonts.ru/import/kelson.css";
+
 @font-face {
 	font-family: Roboto-Light; /* Гарнитура шрифта */
 	src: url(../fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
@@ -16,9 +17,10 @@
 
 body{
 	background-color: #d7d7d7;
-	font-family: 'Roboto Light';
+	font-family: 'Roboto';
 	color: #fff;
 	font-size: 1.8em;
+	font-weight: 300;
 	margin: 0;
 }
 
@@ -51,7 +53,9 @@ body{
 
 .a_button:hover, #callback_btn_2 a:hover {
 	color: black;
-	background-color: #f1c54b; 
+	background-color: #f1c54b;
+		color: #2d2d2d;
+		transition: all 0.5s ease
 }
 
 .a_button:active, #callback_btn_2 a:active {
@@ -63,6 +67,33 @@ body{
 	outline: none;
 }
 
+/*NAVIG*/
+
+.fp-slidesNav ul li a span{
+	background:#fff;
+}
+
+h2{
+	font-weight: 300;
+	font-size: 36px;
+}
+h3{
+	font-size: 18px;
+	font-weight: 100;
+}
+
+h4{
+	font-size: 20px;
+    font-weight: 400;
+}
+
+h5{
+	font-size: 24px;
+	font-weight: 100;
+	color: #f1c54b;
+	margin-top: 50px;
+	margin-bottom: 2px;
+}
 /*HEADER*/
 
 #navLeft {
@@ -153,7 +184,7 @@ body{
 /*SECTION_1*/
 
 #section1 {
-	background-image: url(../images/bgSection1.png); 
+	background-image: url(../images/bgSection1.jpg); 
 	background-position: center;	
 	background-size: cover; 
 }
@@ -214,6 +245,11 @@ body{
 
 .header-parallax_4 {
   background-image: url(../images/parallax_4.png); 
+  background-size: contain;
+}
+
+.header-parallax_5 {
+  background-image: url(../images/parallax_5.png); 
   background-size: contain;
 }
 
@@ -287,32 +323,275 @@ body{
 }
 
 #callback_block .left_block {
+	color: #333;
+	font-size: 16px;
+	font-weight: 400;
 	width: 200px;
 	background: rgba(0, 0, 0, 0) 
 	url("../images/callback_background.png")
 	no-repeat scroll left top;
-	background-position: 20px 30px;
+	background-position: 20px 32px;
 }
 
-#call:hover {
-	color: black; 
+#call{
+cursor: pointer;
+display: inline-block;
+outline: none;
+position: relative;
+-webkit-transition: all 0.3s;
+-moz-transition: all 0.3s;
+transition: all 0.3s;
+overflow: hidden;
+}
+
+#call:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#call:before {
+	content: '';
+	background: url(../images/phone.png);
+	left: -100%;
+    top: 39%;
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    line-height: 2.5;
+    font-size: 180%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	
 } 
 
-#call:active {
+#call span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    -moz-transition: all 0.3s;
+    -moz-backface-visibility: hidden;
+    transition: all 0.3s;
+    backface-visibility: hidden;
 }
 
+#call span:hover{
+transform: translateX(200%);
+}
+
+#call:hover:before {
+    left: 43%;
+}
 /*SECTION_2*/
 
-#section2 {
-	background-image: url(../images/bgSection2.png); 
+#section2{
+		overflow: hidden;
+		text-align: center;
+	}
+
+#myVideo{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		top:0;
+		right:0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% 100%;
+ 		background-color: black; /* in case the video doesn't fit the whole page*/
+  		background-image: /* our video */;
+  		background-position: center center;
+  		background-size: contain;
+   		object-fit: cover; /*cover video background */
+   		z-index:1;
+	}
+
+
+	
+	.contentSlider{
+		position: relative;
+		z-index: 4;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+	.icons{
+		position: relative !important;
+		width: initial !important;
+		display: inline-block;
+	}
+	
+	#slide1 h2{
+		margin-top: 57px;
+	}
+
+	#serviseDiv{
+		margin-top: 42px;
+	}
+	.serviceUl{
+		font-size: 16px;
+		padding-left: 31px;
+		text-align: left;
+		list-style-image: url(../images/Section_2/Slide1/icons/marker.png);
+	}
+
+	.serviceBorder{
+		border-right: 1px solid #f1c54b;
+		padding:22px 0 22px 0;
+	}
+	.serviceBorder:last-child{
+		border-right: none;
+	}
+
+	#designIcon{
+		padding-left: 30px;
+	}
+
+	.buttonZakazat{
+		    border: 2px solid #f1c54b;
+		    padding: 10px 0 10px 0;
+		    margin: 47px 0 22px 0;
+		    font-size: 18px;
+		    color: #fff;
+		    font-weight: 400;
+		    display:block;
+		    cursor: pointer;
+
+	}
+
+	.buttonZakazat:hover,
+	.buttonZakazat:active,
+	.buttonZakazat:focus{
+		text-decoration: none;
+		background-color: #f1c54b;
+		color: #2d2d2d;
+		transition: all 0.5s ease;
+	}
+
+/*NAVIGATION*/
+
+.fp-slidesNav.bottom{
+	bottom: 5px;
+}
+
+.fp-slidesNav.bottom span{
+	width: 7px;
+	height: 7px;	
+}
+
+.fp-controlArrow.fp-prev{
+	left: 107px;
+}
+
+.fp-controlArrow.fp-next{
+	right: 107px;
+}
+
+#a22222{
+	float: right;
+}
+
+/*Slide 2*/
+
+#slide3{
+	text-align: left;
+}
+
+#slide3 p{
+	font-size: 18px;
+	font-weight: 100;
+
+}
+
+#first{
+	background: url(../images/Section_2/Slide3/01.png) no-repeat scroll;
+	background-position: 5% 64%;
+}
+
+#second{
+	background: url(../images/Section_2/Slide3/02.png) no-repeat scroll;
+	background-position: 5% 64%;
+}
+
+#third{
+	background: url(../images/Section_2/Slide3/03.png) no-repeat scroll;
+	background-position: 5% 64%;
+}
+
+#fourth{
+	background: url(../images/04.png) no-repeat scroll;
+	background-position: 5% 64%;
+}
+
+	.buttonPrice{
+		    border: 2px solid #f1c54b;
+		    padding: 10px 0 10px 0;
+		    margin: 17px 0 22px 0;
+		    font-size: 18px;
+		    color: #fff;
+		    font-weight: 400;
+		    display:block;
+		    cursor: pointer;
+
+	}
+
+	.buttonPrice:hover,
+	.buttonPrice:active,
+	.buttonPrice:focus{
+		text-decoration: none;
+		background-color: #f1c54b;
+		color: #2d2d2d;
+		transition: all 0.5s ease;
+	}
+
+
+	.fa-chevron-right{
+	    position: relative;
+	    top: 2px;
+	}
+
+	#slide1:before{
+		content: '';
+    display: block;
+    position: absolute;
+   	left: 13%;
+    margin-left: -52px;
+    top: -2%;
+    width: 51px;
+    height: 133px;
+    background-image: url(../images/Section_2/Slide1/test1.png);
+	}
+
+	#slide1:after{
+		content: '';
+    display: block;
+    position: absolute;
+   	left: 29%;
+    margin-left: -52px;
+    top: 46%;
+    width: 246px;
+    height: 104px;
+    background-image: url(../images/Section_2/Slide1/test2.png);
+	}
+
+
+	/*SECTION_3*/
+
+#section3 {
+	background-image: url(../images/Section_3/Section_3.jpg); 
 	background-position: center;	
 	background-size: cover;
 }
+	/*SECTION_4*/
 
-/*SECTION_3*/
-
-#section3 {
-	background-image: url(../images/Section_3/bgSection3.png); 
+#section4 {
+	background-image: url(../images/Section_4/bgSection3.png); 
 	background-position: center;	
 	background-size: cover;
 }
@@ -329,7 +608,7 @@ body{
 	height: 278px;
 	width: 430px;	
 	background: rgba(0, 0, 0, 0) 
-	url("../images/Section_3/border.png")
+	url("../images/Section_4/border.png")
 	no-repeat scroll left top;
 	background-position: 0 0;
 	font-family: 'Roboto Light';
@@ -431,8 +710,8 @@ body{
 
 /*SECTION4*/
 
-#section4 {
-	background-image: url(../images/Section_4/background.png); 
+#section5 {
+	background-image: url(../images/Section_5/background.png); 
 	background-position: center;	
 	background-size: cover;
 }
@@ -443,7 +722,7 @@ body{
 	height: 391px;
 	width: 800px;
 	background: rgba(0, 0, 0, 0) 
-	url("../images/Section_4/border.png")
+	url("../images/Section_5/border.png")
 	no-repeat scroll left top;
 	background-position: 80px 0;
 	position: relative;
@@ -471,8 +750,8 @@ body{
 
 /*SECTION_5*/
 
-#section5 {
-	background-image: url(../images/Section_5/background.png); 
+#section6 {
+	background-image: url(../images/Section_6/background.png); 
 	background-position: center;	
 	background-size: cover;
 }
@@ -568,12 +847,6 @@ body{
 
 /*POPUP_CALLBACK*/
 
- #my_popup {
- 	background-color:white;
- 	width: 400px;
- 	height: 600px;
- }
-
  .logo_popup {
  	display: block;
  	margin: 0 auto;
@@ -589,11 +862,17 @@ body{
 	background-position: 0 10px;
  }
 
- /*CALLBACK_FORM*/
+ /*POPUP_CALLBACK*/
 
-#my_popup {
-	position: relative;
-}
+ #callback_popup,
+ #coast_popup {
+ 	background-color:white;
+ 	width: 400px;
+ 	height: 600px;
+ }
+
+
+ /*CALLBACK_FORM*/	
 
 #callback_form_popup {
 	width: 300px;
@@ -631,15 +910,127 @@ body{
 	font-family: 'Roboto Medium';
 }
 
-.my_popup_close {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	width: 30px;
-	height: 30px;
-	background: none;
-	border: none;
+
+ #coast_popup {
+ 	background-color:white;
+ 	width: 400px;
+ 	height: 600px;
+ 	line-height: 24px;
+ }
+
+
+ /*COAST_FORM*/
+
+ #coast_form {
+ 	width: 230px;
+ 	margin: 0 auto;
+ }
+
+ .colCheckBox {
+ 	width: 115px;
+ 	text-align: left;
+ 	height: 19px;
+ }
+ 
+ .colCheckBoxRight  input[type="checkbox"],
+ .colCheckBox  input[type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+    height: 40px;
 }
+
+.colCheckBoxRight input[type="checkbox"] + label,
+.colCheckBox input[type="checkbox"] + label {
+    background: url(../images/Popup_coast/background_checkbox.png) 0 0 no-repeat;
+    padding-left: 35px;
+    font-weight: 100;
+}
+
+.colCheckBoxRight input[type="checkbox"]:checked + label,
+.colCheckBox input[type="checkbox"]:checked + label {
+    background: url(../images/Popup_coast/background_checkbox_check.png) 0 0 no-repeat;
+    background-size: 19px 19px;
+}
+
+ .full {
+ 	width: 100%;
+ }
+
+ .colCheckBoxRight {
+ 	text-align: left;
+ 	float: right;
+ 	width: 115px;
+ 	height: 19px;
+ }
+
+ .checkBoxRow {
+ 	font-size: 16px;
+ 	margin-top: 25px;
+ }
+
+ #coast_form select {
+ 	font-family: 'Roboto Medium';
+ 	width: 100%;
+ 	height: 50px;
+ 	background: none;
+ 	margin-top: 25px;
+ 	border: 2px solid #f1c54b;
+ 	color: black !important;
+ 	font-size: 20px;
+ 	text-align: left;
+ 	text-indent: 5px;
+ }
+
+.element {
+	background: url(../images/Popup_coast/element.png) 0 0 no-repeat;
+	height: 14px;
+	margin-top: 30px;
+}
+
+#result {
+	margin: 0;
+	margin-top: 25px;
+	font-family: 'Roboto Medium';
+	font-size: 48px;
+}
+
+ /*Стили полей при клике по ним*/
+ #coast_form select:focus
+ {
+ 	outline: none;
+ 	border: 2px solid white;
+ }
+
+ #coast_form select option {
+	outline: none;
+ 	border: 2px solid white;
+ }
+
+ /*Стили для кнопки*/
+ .coastButton_popup {
+ 	background: white !important;
+ 	margin-top: 70px;
+ 	width: 230px;
+ 	height: 45px;
+ 	color: black;
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	border: 2px solid #f1c54b;
+ 	font-family: 'Roboto Medium';
+ 	font-size: 24px;
+ }
+
+ .coast_popup_close,
+ .callback_popup_close {
+ 	position: absolute;
+ 	top: 5px;
+ 	right: 5px;
+ 	width: 30px;
+ 	height: 30px;
+ 	background: none;
+ 	border: none;
+ 	line-height: normal;
+ }
 
 #callback_form_popup input::-webkit-input-placeholder {color: #989696 !important;   transition: text-indent 0.3s ease;opacity: 1; transition: opacity 0.3s ease;}
 #callback_form input::-webkit-input-placeholder,

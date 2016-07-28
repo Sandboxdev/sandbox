@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
 	$('#mainSection').fullpage({
-		navigation: true,
 		menu:'#responsive-menu',
-		anchors:['firstSection','secondSection','3rdSection','4rdSection','5rdSection'],
+		slidesNavigation: true,
+		anchors:['firstSection','secondSection','3rdSection','4rdSection','5rdSection','6rdSection'],
 		afterLoad:function(link, index) { 
 
 			if(link == "secondSection"){
@@ -25,7 +25,13 @@ $(document).ready(function(){
 				if(link == "3rdSection") {
 
 				} 
-			}
+			},
+			afterRender: function(){
+
+
+					//playing the video
+					$('video').get(0).play();
+				}
 
 		});
 
