@@ -347,8 +347,6 @@ $(document).ready(function(){
     }
 
     function changeLang() {
-
-
     	if (document.createNodeIterator && document.createTreeWalker){ //Traversal API
  nodes = document.createNodeIterator( //создание NodeItertor
   document,//обход всего документа
@@ -373,19 +371,8 @@ for(var i = 0; i < forms.length; i++ )
 			forms[i].elements[j].placeholder = getPhrase(forms[i].elements[j].placeholder);
 		alert("|" + forms[i].elements[j].placeholder + "|");
 
-
-
-
 	}
-
-
-
-
-    	//var all_langEl = document.querySelectorAll('[data-id_phrase]');
-    	//for(var i = 0; i < all_langEl.length; i++) {
-    		//all_langEl[i].innerHTML = getPhrase(all_langEl[i].dataset.id_phrase);
-    	//}
-    }
+}
 
 
 
