@@ -261,6 +261,11 @@ $(document).ready(function(){
     ["Имя", "Name"],
     ["Телефон", "Phone"],
     ["Сообщение", "Message"],
+    ["Заказ", "Order"],
+    ["Обсуждение", "Discussion"],
+    ["Прототип", "Prototype"],
+    ["Разработка", "Development"],
+    ["Оптимизация", "Optimization"],
 
     ["Home", "Главная"],
     ["Services", "Услуги"],
@@ -326,7 +331,12 @@ $(document).ready(function(){
     ["Order a call", "Заказать звонок"],
     ["Name", "Имя"],
     ["Phone", "Телефон"],
-    ["Message", "Сообщение"]
+    ["Message", "Сообщение"],
+    ["Order", "Заказ"],
+    ["Discussion", "Обсуждение"],
+    ["Prototype", "Прототип"],
+    ["Development", "Разработка"],
+    ["Optimization", "Оптимизация"],
     ];
 
     var phrases = new Map(phrasesArray);
