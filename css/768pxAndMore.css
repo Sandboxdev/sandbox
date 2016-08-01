@@ -392,23 +392,6 @@ h5{
 	left: 43%;
 }
 
-#slide1 .decor_line_2 {
-	width: 246px;
-	height: 104px;
-	background: url(../images/Section_2/Slide1/test2.png);
-	position: absolute;
-	right: 0;
-	top: 48%;
-}
-
-#slide1 .decor_line_1 {
-	width: 51px;
-	height: 133px;
-	background: url(../images/Section_2/Slide1/test1.png);
-	position: absolute;
-	right: 60%;
-	top: -7%;
-}
 
 /*SECTION_2*/
 
@@ -701,6 +684,8 @@ h5{
 	font-weight: normal;
 	line-height: 1.2;
 	text-align: left;
+	overflow: auto;
+	width: 264px;
 }
 
 .right_text a {

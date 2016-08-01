@@ -140,7 +140,8 @@ $(document).ready(function(){
 
     var coast = 0;
 
-    function calculate() {
+
+    $('#btnCalculate').click(function(){
 
     	var elements = document.forms["coast_form"].elements;
 
@@ -176,18 +177,26 @@ $(document).ready(function(){
     	$('#btnCalculate').css("margin-top", "12px");
     	$('#result').text("=" + coast + "$");
     	coast = 0;
-    }
+    });
 
     function resetCoastPopup() {
     	$('#btnCalculate').css("margin-top", "70px");
     	$('#result').text("");
+        var elements = document.forms["coast_form"].elements;
+        elements.design.checked = false;
+        elements.brending.checked = false;
+        elements.seo.checked = false;
+        elements.logo.checked = false;
+        elements.mlang.checked = false;
+        elements.socapi.checked = false;
+        elements.type.value = 'type_app';
     }
 
     function resetCallbackPopup() {
-    	var elements = $('#callback_form_popup').children('input');
-    	for(var i = 0; i < elements.length; i++) {
-    		elements[i].value = "";
-    	}
+        var elements = $('#callback_form_popup').children('input');
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].value = "";
+        }
     }
 
     //multilang
@@ -217,7 +226,7 @@ $(document).ready(function(){
     ["Сайт-визитка", "Website card"],
     ["Интернет-магазины", "Online shops"],
     ["Порталы", "Informational Websites"],
-    ["Сервисы", "Services"],
+    ["Сервисы", "Web-services"],
     ["Дизайн", "Design"],
     ["Прототипы", "Prototypes"],
     ["Брендинг", "Branding"],
@@ -248,10 +257,10 @@ $(document).ready(function(){
     ["Мультиязычность", "Multilanguage"],
     ["API социальных сетей", "API social networks"],
     ["Заказывай дешевле", "Order cheaper"],
-    ["При заказе", "Get a 10%"],
-    ["полного пакета", "discount"],
-    ["услуг", "when"],
-    ["скидка в 10%", "ordering"],
+    ["При заказе", "Get a 10% discount when ordering"],
+    ["полного пакета", "full package"],
+    ["услуг", "of"],
+    ["скидка в 10%", " services"],
     ["Совершить заказ", "To order"],
     ["Молодая компания, которая предоставляет полный спектр услуг по профессиональной разработке web приложений, а также сайтов любого уровня сожности и комплексному продвежению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение  потребностей наших клиентов, высокое качество разработки и дизайна, а также эффективное ведение рекламынх компаний.",
     "A young company, which provides a full range of services in professional development of web applications and sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design, conduct of advertising campaigns."],
@@ -288,7 +297,7 @@ $(document).ready(function(){
     ["Website card", "Сайт-визитка"],
     ["Online shops", "Интернет-магазины"],
     ["Informational Websites", "Порталы"],
-    ["Services", "Сервисы"],
+    ["Web-services", "Сервисы"],
     ["Design", "Дизайн"],
     ["Prototypes", "Прототипы"],
     ["Branding", "Брендинг"],
@@ -319,10 +328,10 @@ $(document).ready(function(){
     ["Multilanguage", "Мультиязычность"],
     ["API social networks", "API социальных сетей"],
     ["Order cheaper", "Заказывай дешевле"],
-    ["Get a 10%", "При заказе"],
-    ["discount", "полного пакета"],
-    ["when", "услуг"],
-    ["ordering", "скидка в 10%"],
+    ["Get a 10% discount when ordering", "При заказе"],
+    ["full package", "полного пакета"],
+    ["of", "услуг"],
+    ["services", " скидка в 10%"],
     ["To order", "Совершить заказ"],
     ["A young company, which provides a full range of services in professional development of web applications and sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design, conduct of advertising campaigns.",
     "Молодая компания, которая предоставляет полный спектр услуг по профессиональной разработке web приложений, а также сайтов любого уровня сожности и комплексному продвежению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение  потребностей наших клиентов, высокое качество разработки и дизайна, а также эффективное ведение рекламынх компаний."],
