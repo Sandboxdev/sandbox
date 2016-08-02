@@ -1,126 +1,126 @@
 $(document).ready(function(){
 
-	$('#mainSection').fullpage({
-		menu:'#responsive-menu',
-		slidesNavigation: true,
-		anchors:['firstSection','secondSection','3rdSection','4rdSection','5rdSection','6rdSection'],
-		afterLoad:function(link, index) { 
+    $('#mainSection').fullpage({
+        menu:'#responsive-menu',
+        slidesNavigation: true,
+        anchors:['firstSection','secondSection','3rdSection','4rdSection','5rdSection','6rdSection'],
+        afterLoad:function(link, index) { 
 
-			if(link == "secondSection"){
-					//вторая секция, левый блок теста.
-					$('#section2 p,.textSection2 h3').show(function(){
-						$(this).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0})
-					});
-					$('#section2 p,.textSection2 h3').addClass('fadeInLeft');
+            if(link == "secondSection"){
+                    //вторая секция, левый блок теста.
+                    $('#section2 p,.textSection2 h3').show(function(){
+                        $(this).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0})
+                    });
+                    $('#section2 p,.textSection2 h3').addClass('fadeInLeft');
 
-					//
-					$('.weCanSection2 h3,.weCanSection2 ul').show(function(){
-						$(this).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0})
-					});
-					$('.weCanSection2 h3,.weCanSection2 ul').addClass('fadeInRight');
-					
-					
-				} 
+                    //
+                    $('.weCanSection2 h3,.weCanSection2 ul').show(function(){
+                        $(this).css({opacity: 0.0, visibility: "visible"}).animate({opacity: 1.0})
+                    });
+                    $('.weCanSection2 h3,.weCanSection2 ul').addClass('fadeInRight');
+                    
+                    
+                } 
 
-				if(link == "3rdSection") {
+                if(link == "3rdSection") {
 
-				} 
-			},
-			afterRender: function(){
+                } 
+            },
+            afterRender: function(){
 
 
-					//playing the video
-					$('video').get(0).play();
-				}
+                    //playing the video
+                    $('video').get(0).play();
+                }
 
-			});
+            });
 
-	$('#togler-button').click(function(){
-		$('#togler-button-bg').toggleClass('off');
-		$('#rus').toggleClass('rus_off');
-		$('#eng').toggleClass('eng_on');
-		changeLang();
-	});
-	
-	//parallax
-	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene);
+    $('#togler-button').click(function(){
+        $('#togler-button-bg').toggleClass('off');
+        $('#rus').toggleClass('rus_off');
+        $('#eng').toggleClass('eng_on');
+        changeLang();
+    });
+    
+    //parallax
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
 
     //callback_form_main
     document.getElementById('callback_form_main').addEventListener('submit', function(evt){
-    	var http = new XMLHttpRequest(), f = this;
-    	evt.preventDefault();
-    	http.open("POST", "contacts.php", true);
-    	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    	http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&body=" + f.body.value + "&type=MAIN");
-    	http.onreadystatechange = function() {
-    		if (http.readyState == 4 && http.status == 200) {
-    			alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');    
-    			f.name.value = '';
-    			f.phone.value = '';
-    			f.body.value='';
-    		}
-    	}
-    	http.onerror = function() {
-    		alert('Извините, данные не были переданы');
-    	}
+        var http = new XMLHttpRequest(), f = this;
+        evt.preventDefault();
+        http.open("POST", "contacts.php", true);
+        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&body=" + f.body.value + "&type=MAIN");
+        http.onreadystatechange = function() {
+            if (http.readyState == 4 && http.status == 200) {
+                alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');    
+                f.name.value = '';
+                f.phone.value = '';
+                f.body.value='';
+            }
+        }
+        http.onerror = function() {
+            alert('Извините, данные не были переданы');
+        }
     }, false);
 
         //callback_form_sale
         document.getElementById('callback_form').addEventListener('submit', function(evt){
-        	var http = new XMLHttpRequest(), f = this;
-        	evt.preventDefault();
-        	http.open("POST", "contacts.php", true);
-        	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        	http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&body=" + f.body.value + "&type=SALE");
-        	http.onreadystatechange = function() {
-        		if (http.readyState == 4 && http.status == 200) {
-        			alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');  
-        			f.name.value = '';
-        			f.phone.value = '';
-        			f.body.value='';
-        		}
-        	}
-        	http.onerror = function() {
-        		alert('Извините, данные не были переданы');
-        	}
+            var http = new XMLHttpRequest(), f = this;
+            evt.preventDefault();
+            http.open("POST", "contacts.php", true);
+            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&body=" + f.body.value + "&type=SALE");
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');  
+                    f.name.value = '';
+                    f.phone.value = '';
+                    f.body.value='';
+                }
+            }
+            http.onerror = function() {
+                alert('Извините, данные не были переданы');
+            }
         }, false);
 
         //popup_callback_form
         document.getElementById('callback_form_popup').addEventListener('submit', function(evt){
-        	var http = new XMLHttpRequest(), f = this;
-        	evt.preventDefault();
-        	http.open("POST", "contacts.php", true);
-        	http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        	http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&e-mail=" + f.mail.value + "&skype=" + f.skype.value + "&type=POPUP");
-        	http.onreadystatechange = function() {
-        		if (http.readyState == 4 && http.status == 200) {
-        			alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');    
-        			f.name.value = '';
-        			f.phone.value = '';
-        			f.skype.value='';
-        			f.mail.value='';
-        		}
-        	}
-        	http.onerror = function() {
-        		alert('Извините, данные не были переданы');
-        	}
+            var http = new XMLHttpRequest(), f = this;
+            evt.preventDefault();
+            http.open("POST", "contacts.php", true);
+            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            http.send("name=" + f.name.value + "&phone=" + f.phone.value + "&e-mail=" + f.mail.value + "&skype=" + f.skype.value + "&type=POPUP");
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');    
+                    f.name.value = '';
+                    f.phone.value = '';
+                    f.skype.value='';
+                    f.mail.value='';
+                }
+            }
+            http.onerror = function() {
+                alert('Извините, данные не были переданы');
+            }
         }, false);
 
     // Initialize the plugin POPUP
     $('#callback_popup').popup(
     {
-    	onclose: function() {
-    		resetCallbackPopup();
-    	}
+        onclose: function() {
+            resetCallbackPopup();
+        }
 
     });
 
     $('#coast_popup').popup({
-    	
-    	onclose: function() {
-    		resetCoastPopup();
-    	}
+        
+        onclose: function() {
+            resetCoastPopup();
+        }
     });
 
     /*COAST_POPUP*/
@@ -143,45 +143,45 @@ $(document).ready(function(){
 
     $('#btnCalculate').click(function(){
 
-    	var elements = document.forms["coast_form"].elements;
+        var elements = document.forms["coast_form"].elements;
 
-    	if(elements.design.checked)
-    		coast += prices.design;
-    	if(elements.brending.checked)
-    		coast += prices.brending;
-    	if(elements.seo.checked)
-    		coast += prices.seo;
-    	if(elements.logo.checked)
-    		coast += prices.logo;
-    	if(elements.mlang.checked)
-    		coast += prices.mlang;
-    	if(elements.socapi.checked)
-    		coast += prices.socapi;
+        if(elements.design.checked)
+            coast += prices.design;
+        if(elements.brending.checked)
+            coast += prices.brending;
+        if(elements.seo.checked)
+            coast += prices.seo;
+        if(elements.logo.checked)
+            coast += prices.logo;
+        if(elements.mlang.checked)
+            coast += prices.mlang;
+        if(elements.socapi.checked)
+            coast += prices.socapi;
 
-    	switch(elements.type.value)
-    	{
-    		case 'portals_and_service':
-    		coast += typeCoast.portals_and_service;
-    		break;
-    		case 'shop':
-    		coast += typeCoast.shop;
-    		break;
-    		case 'cutaway':
-    		coast += typeCoast.cutaway;
-    		break; 
-    		case 'landing':
-    		coast += typeCoast.landing;
-    		break;
-    	}
+        switch(elements.type.value)
+        {
+            case 'portals_and_service':
+            coast += typeCoast.portals_and_service;
+            break;
+            case 'shop':
+            coast += typeCoast.shop;
+            break;
+            case 'cutaway':
+            coast += typeCoast.cutaway;
+            break; 
+            case 'landing':
+            coast += typeCoast.landing;
+            break;
+        }
 
-    	$('#btnCalculate').css("margin-top", "12px");
-    	$('#result').text("=" + coast + "$");
-    	coast = 0;
+        $('#btnCalculate').css("margin-top", "12px");
+        $('#result').text("=" + coast + "$");
+        coast = 0;
     });
 
     function resetCoastPopup() {
-    	$('#btnCalculate').css("margin-top", "70px");
-    	$('#result').text("");
+        $('#btnCalculate').css("margin-top", "70px");
+        $('#result').text("");
         var elements = document.forms["coast_form"].elements;
         elements.design.checked = false;
         elements.brending.checked = false;
@@ -250,7 +250,7 @@ $(document).ready(function(){
     ["Это возможность познакомить клиентов с вашими товарами и услугами, но самое главное — дает возможность совершить покупку, не отходя от компьютера.",
     "This is an opportunity to acquaint clients with your goods and services. But most importantly, it gives a chance to make a purchase without moving away from your computer."],
     ["Landing page - сайт, который продает. Разработаем сайт, который привлечет новых клиентов к Вашей услуге, товару, событию.",
-    "no phrase"],
+    "Landing page is a site that sales. We'll develop a site, that will draw customers' attention to your services, goods and events."],
     ["Расчитать", "Сalculate"],
     ["Тип Веб-приложения", "Type of application"],
     ["Логотип", "Logo"],
@@ -320,7 +320,7 @@ $(document).ready(function(){
     "Это, как правило, простой сайт, содержащий общую информацию о компании и роде оказываемых услуг."],
     ["This is an opportunity to acquaint clients with your goods and services. But most importantly, it gives a chance to make a purchase without moving away from your computer.",
     "Это возможность познакомить клиентов с вашими товарами и услугами, но самое главное — дает возможность совершить покупку, не отходя от компьютера."],
-    ["no phrase",
+    ["Landing page is a site that sales. We'll develop a site, that will draw customers' attention to your services, goods and events.",
     "Landing page - сайт, который продает. Разработаем сайт, который привлечет новых клиентов к Вашей услуге, товару, событию."],
     ["Сalculate", "Расчитать"],
     ["Type of application", "Тип Веб-приложения"],
@@ -351,12 +351,12 @@ $(document).ready(function(){
     var phrases = new Map(phrasesArray);
 
     function getPhrase(id_phrase) {
-    	var phrase = phrases.get(id_phrase) ? phrases.get(id_phrase) : id_phrase;
-    	return phrase;
+        var phrase = phrases.get(id_phrase) ? phrases.get(id_phrase) : id_phrase;
+        return phrase;
     }
 
     function changeLang() {
-    	if (document.createNodeIterator && document.createTreeWalker){ //Traversal API
+        if (document.createNodeIterator && document.createTreeWalker){ //Traversal API
  nodes = document.createNodeIterator( //создание NodeItertor
   document,//обход всего документа
   NodeFilter.SHOW_TEXT,//узлы текст
@@ -368,19 +368,19 @@ $(document).ready(function(){
 //nodes
 var node;
 while(node = nodes.nextNode())
-	if(node.wholeText.match(/[\wа-яё]+/gi) != null)
-		node.data = getPhrase(node.data.trim());
+    if(node.wholeText.match(/[\wа-яё]+/gi) != null)
+        node.data = getPhrase(node.data.trim());
 
 //forms
 var forms = document.forms;
 
 for(var i = 0; i < forms.length; i++ )
-	for(var j = 0; j < forms[i].elements.length; j ++)
-		if(forms[i].elements[j].placeholder != "") 
-			forms[i].elements[j].placeholder = getPhrase(forms[i].elements[j].placeholder);
-		alert("|" + forms[i].elements[j].placeholder + "|");
+    for(var j = 0; j < forms[i].elements.length; j ++)
+        if(forms[i].elements[j].placeholder != "") 
+            forms[i].elements[j].placeholder = getPhrase(forms[i].elements[j].placeholder);
+        alert("|" + forms[i].elements[j].placeholder + "|");
 
-	}
+    }
 }
 
 
