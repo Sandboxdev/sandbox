@@ -1,34 +1,55 @@
+
 @import "http://webfonts.ru/import/opensans.css";
 @import "http://webfonts.ru/import/roboto.css";
 @import "http://webfonts.ru/import/kelson.css";
+@import "http://webfonts.ru/import/intro.css";
 
-@font-face {
-	font-family: Roboto-Light; /* Гарнитура шрифта */
-	src: url(../fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
-}
-@font-face {
-	font-family: Intro; /* Гарнитура шрифта */
-	src: url(../fonts/Intro.otf); /* Путь к файлу со шрифтом */
-}
-@font-face {
-	font-family: Roboto-Medium; /* Гарнитура шрифта */
-	src: url(../fonts/Roboto-Medium.ttf); /* Путь к файлу со шрифтом */
-}
 
-.fp-section,
-.fp-slide,
-.fp-tableCell{
-    height: auto !important;
+html{
+	font-size: 100%;
+	min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
 }
 
 body{
+	 height:100%; 
 	background-color: #d7d7d7;
 	font-family: 'Roboto';
 	color: #fff;
-	font-size: 1.8em;
+	font-size: 12px;
 	font-weight: 300;
 	margin: 0;
+
 }
+
+.row{
+	margin:0;
+}
+
+/*LOADER*/
+#before-load {
+  position: fixed; /*фиксированное положение блока*/
+  left: 0; /*положение элемента слева*/
+  top: 0; /*положение элемента сверху*/
+  right: 0; /*положение элемента справа*/
+  bottom: 0; /*положение элемента снизу*/
+  background: #eee; /*цвет заднего фона блока*/
+  z-index: 999999999; /*располагаем его над всеми элементами на странице*/
+}
+.load-cont span {
+	display: inline-block !important;
+    width: 120px; /*ширина gif-изображения*/
+    height: 120px; /*высота gif-изображения*/
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    background: url('../images/gif.gif') no-repeat  50% 50%; /*расположение (url) изображения gif и др. параметры*/
+    margin: -85px 0 0 -85px;
+}
+
+
+
+
 
 .sandbox_color {
 	color: #f1c54b;
@@ -36,17 +57,18 @@ body{
 	
 .upper {
 	font-weight: 300;
-	font-size: 36px;
+	font-size: 22px;
 	font-family: 'Intro';
 	text-transform: uppercase;
 }
 
 .button_style {
-	width: 200px;
-	height: 45px;
-	border: 2px solid #f1c54b;
-	line-height: 43px;
-	font-family: 'Roboto Medium';
+    width: 121px;
+    height: 33px;
+    border: 2px solid #f1c54b;
+    line-height: 32px;
+	font-family: 'Roboto';
+	font-weight: 400;
 }
 
 .a_button {
@@ -79,23 +101,23 @@ body{
 
 h2{
 	font-weight: 300;
-	font-size: 36px;
+	font-size: 17px;
 }
 h3{
-	font-size: 18px;
+	font-size: 13px;
 	font-weight: 100;
 }
 
 h4{
-	font-size: 20px;
+	font-size: 12px;
     font-weight: 400;
 }
 
 h5{
-	font-size: 24px;
+	font-size: 12px;
 	font-weight: 100;
 	color: #f1c54b;
-	margin-top: 50px;
+	margin-top: 25px;
 	margin-bottom: 2px;
 }
 /*HEADER*/
@@ -105,22 +127,31 @@ h5{
 	float: none;
 }
 
+#responsive-menu {
+	border: none;
+    background-color: rgba(75, 75, 75, 0.6);
+}
+
 #responsive-menu img{
-	float: left;
-	height: auto;
-	max-width: 100%;
-	display:block;
+float: left;
+    height: 22px;
+    max-width: none;
+    display: block;
+    position: relative;
+    right: 22px;
+    top: 4px;
 }
 
 .navbar-default{
 	background-color: transparent;
 	border: 0;
 	margin-bottom: 0;
+
 }
 
 #navLeft  li a{
 	margin-right: 15px;
-	padding-top: 10px !important;
+	padding-bottom: 10px !important;
 	margin-left: 15px;
 	color: #fff;
 	padding: 0;
@@ -130,23 +161,40 @@ h5{
 #navLeft .active a:focus,
 #navLeft .active a:hover{
 	background-color: transparent !important;
-	border-top: 3px solid #f1c54b !important;
-	padding-top: 7px !important;
+	border-bottom: 3px solid #f1c54b !important;
+	padding-bottom: 7px !important;
+}
+
+
+.icon-bar {
+    background-color: #fff !important;
+}
+
+ .navbar-default .navbar-toggle:hover {
+    background-color: #f1c54b;
+}
+.navbar-default .navbar-toggle:focus{
+	background: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
 }
 
 /*TOGLER-BUTTON*/
 #togler-button {
 	position: relative; 
-	font-size: 20px; 
+	font-size: 17px; 
 	color: black; 
 	border: 2px solid #f1c54b;
 	padding: 2px;
 	text-align: center;
-	width: 90px;
-	height: 35px;
+	width: 77px;
+	height: 30px;
 	z-index: 2; 
 	cursor: pointer;
 }
+
 
 #rus {
 	margin-right: 2px;
@@ -170,9 +218,9 @@ h5{
 
 #togler-button-bg {
 	position: relative; 
-	width: 45px;
-	height: 35px;
-	top: -35px; 
+	width: 39px;
+    height: 26px;
+    top: -28px;
 	font-size:20px; 
 	background: #f1c54b;
 	z-index: 1;
@@ -181,7 +229,7 @@ h5{
 }
 
 .off {
-	margin-left: 45px; 
+	margin-left: 38px; 
 }
 
 
@@ -191,6 +239,7 @@ h5{
 	background-image: url(../images/bgSection1.jpg); 
 	background-position: center;	
 	background-size: cover; 
+	height: 480px !important;
 }
 
 /*PARALLAX*/
@@ -209,7 +258,7 @@ h5{
 #scene > .layer {
   position: relative;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   height: 100%;
   width: 100%; 
 }
@@ -272,15 +321,11 @@ h5{
 
 #title_1s {
 	height: 217px;
-	background: rgba(0, 0, 0, 0) 
-	url("../images/main_section_border.png")
-	no-repeat scroll left top;
 	background-position: 40px 0;
 	line-height: 1.3;
-	font-size: 24px;
-	font-weight: 300;
-	font-family: 'Roboto Light';
+	font-size: 13px;
 	padding: 25px 0 25px 0;
+	margin:0;
 }
 
 
@@ -343,7 +388,7 @@ h5{
 }
 
 #buttons_1s {
-	margin-top: 20px;
+	margin-top: 0;
 	font-weight: 500;
 }
 
@@ -352,14 +397,18 @@ h5{
 }
 
 #buttons_1s .left_btn {
-	margin-left: 30px;
+	margin-left: 0;
+}
+
+#but_1s{
+	width: 255px;
 }
 
 /*CALLBACK*/
 
 #callback_block {
 	position: absolute; 
-	right: 100px;
+	right: -60px;
 	bottom: 5px; 
 	height: 100px;
 	line-height: 100px; 
@@ -384,13 +433,13 @@ h5{
 
 #call{
 color: #333;
-font-size: 16px;
+font-size: 10px;
 font-weight: 400;
 min-width: 200px;
 background: rgba(0, 0, 0, 0) 
-			url("../images/callback_background.png")
+			url("../images/callback_background_60pr.png")
 			no-repeat scroll left top;
-background-position: 20px 32px;
+	background-position: 85px 39px;
 cursor: pointer;
 display: inline-block;
 outline: none;
@@ -404,9 +453,10 @@ backface-visibility: hidden;
 }
 
 #call:hover:before {
-    left: 0;
-    top: 4px;
+   left: 32px;
+    top: 2px;
 }
+
 #call:before {
     left: -100%;
     top: 0;
@@ -420,7 +470,7 @@ backface-visibility: hidden;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 
-	 content: url(../images/phone.png);
+	 content: url(../images/phone_60pr.png);
     font-family: 'icomoon';
     speak: none;
     font-style: normal;
@@ -443,7 +493,7 @@ backface-visibility: hidden;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 32px;
     width: 100%;
     height: 100%;
     -webkit-transition: all 0.3s;
@@ -457,8 +507,10 @@ backface-visibility: hidden;
 /*SECTION_2*/
 
 #section2{
+		background-image: url(../images/Hello-World.jpg);
 		overflow: hidden;
 		text-align: center;
+		height: 566px !important;
 	}
 
 #myVideo{
@@ -489,7 +541,7 @@ backface-visibility: hidden;
 	}
 	.icons{
 		position: relative !important;
-		width: initial !important;
+		width: 41px;
 		display: inline-block;
 	}
 	
@@ -501,10 +553,10 @@ backface-visibility: hidden;
 		margin-top: 42px;
 	}
 	.serviceUl{
-		font-size: 16px;
-		padding-left: 31px;
+		font-size: 9px;
+		padding-left: 15px;
 		text-align: left;
-		list-style-image: url(../images/Section_2/Slide1/icons/marker.png);
+		list-style-image: url(../images/Section_2/Slide1/icons/marker_60pr.png);
 	}
 
 	.serviceBorder{
@@ -521,14 +573,14 @@ backface-visibility: hidden;
 
 	.buttonZakazat{
 		    border: 2px solid #f1c54b;
-		    padding: 10px 0 10px 0;
 		    margin: 47px 0 22px 0;
-		    font-size: 18px;
+		    font-size: 11px;
 		    color: #fff;
 		    font-weight: 400;
 		    display:block;
 		    cursor: pointer;
-		    height: 45px;
+		    height: 34px;
+    		line-height: 31px;
 	}
 
 	.buttonZakazat:hover,
@@ -552,15 +604,22 @@ backface-visibility: hidden;
 }
 
 .fp-controlArrow.fp-prev{
-	left: 107px;
+	left: 2%;
+	border-width: 17.5px 20px 17.5px 0;
 }
 
 .fp-controlArrow.fp-next{
-	right: 107px;
+	right: 2%	;
+	border-width: 17.5px 0 17.5px 20px;
 }
 
 #a22222{
 	float: right;
+	    display: inline-block;
+    margin-top: 2%;
+    position: relative;
+    top: 0;
+    right: -21px;
 }
 
 /*SLIDE_2*/
@@ -575,62 +634,64 @@ backface-visibility: hidden;
 }
 
 .bg_steps {
-	background: url(../images/Section_2/Slide2/bgSection3.1.png) no-repeat scroll;
-	background-size: 100%; 
+	background: url(../images/Section_2/Slide2/bgSection3.1_50pr.png) no-repeat scroll;
+	background-size: contain; 
 	height: 99999px;
 }
 
 .steps_block {
+	    background-position: 12px !important;
 	position: relative;
-	width: 722px;
-	height: 225px;
-	background: url(../images/Section_2/Slide2/lines.png) no-repeat scroll;
+	width: 335px;
+	height: 180px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 60px;
 }
 
 .steps_block div {
-	width: 95px;
-	height: 130px;
-	position: absolute;
-	padding-top: 100px;
+	padding-top: 50px;
+    text-align: center;
+    height: 117px;
+    width: 38px;
+    position: absolute;
+    font-size: 8px;
 }
 
 .icon_1 {
-	background: url(../images/Section_2/Slide2/icon_1.png) no-repeat scroll;
-	left: 72px;
-	top: 103px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_1.png) no-repeat scroll;
+	left: 42px;
+    top: 87px;
 }
 
 .icon_2 {
-	background: url(../images/Section_2/Slide2/icon_2.png) no-repeat scroll;
-	left: 171px;
-	top: 85px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_2.png) no-repeat scroll;
+	left: 81px;
+    top: 79px;
 }
 
 .icon_3 {
-	background: url(../images/Section_2/Slide2/icon_3.png) no-repeat scroll;
-	left: 270px;
-	top: 58px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_3.png) no-repeat scroll;
+	left: 120px;
+    top: 67px;
 }
 
 .icon_4 {
-	background: url(../images/Section_2/Slide2/icon_4.png) no-repeat scroll;
-	left: 364px;
-	top: 35px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_4.png) no-repeat scroll;
+	left: 157px;
+    top: 59px;
 }
 
 .icon_5 {
-	background: url(../images/Section_2/Slide2/icon_5.png) no-repeat scroll;
-	left: 461px;
-	top: 14px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_5.png) no-repeat scroll;
+	left: 197px;
+    top: 51px;
 }
 
 .icon_6 {
-	background: url(../images/Section_2/Slide2/icon_6.png) no-repeat scroll;
-	left: 561px;
-	top: 1px;
+	background: url(../images/Section_2/Slide2/icons480px/icon_6.png) no-repeat scroll;
+	left: 236px;
+    top: 45px;
 }
 
 #slide3{
@@ -638,41 +699,41 @@ backface-visibility: hidden;
 }
 
 #slide3 p{
-	font-size: 18px;
+	font-size: 10px;
 	font-weight: 100;
 
 }
 
 #first{
-	background: url(../images/Section_2/Slide3/01.png) no-repeat scroll;
-	background-position: 5% 64%;
+	background: url(../images/Section_2/Slide3/01_50pr.png) no-repeat scroll;
+	background-position: 5% 24%;
 }
 
 #second{
-	background: url(../images/Section_2/Slide3/02.png) no-repeat scroll;
-	background-position: 5% 64%;
+	background: url(../images/Section_2/Slide3/02_50pr.png) no-repeat scroll;
+	background-position: 5% 25%;
 }
 
 #third{
-	background: url(../images/Section_2/Slide3/03.png) no-repeat scroll;
-	background-position: 5% 64%;
+	background: url(../images/Section_2/Slide3/03_50pr.png) no-repeat scroll;
+	background-position: 5% 20%;
 }
 
 #fourth{
-	background: url(../images/04.png) no-repeat scroll;
-	background-position: 5% 64%;
+	background: url(../images/Section_2/Slide3/04_50pr.png) no-repeat scroll;
+	background-position: 5% 28%;
 }
 
 	.buttonPrice{
 		    border: 2px solid #f1c54b;
-		    padding: 10px 0 10px 0;
 		    margin: 17px 0 22px 0;
-		    font-size: 18px;
+		    font-size: 11px;
 		    color: #fff;
 		    font-weight: 400;
 		    display:block;
 		    cursor: pointer;
-		    height: 45px;
+		    height: 31px;
+		    line-height: 26px;
 
 	}
 
@@ -698,7 +759,7 @@ backface-visibility: hidden;
     top: 30%;
 }
 
-	#slide1:before{
+	/*#slide1:before{
 		content: '';
     display: block;
     position: absolute;
@@ -721,7 +782,7 @@ backface-visibility: hidden;
     height: 104px;
     background-image: url(../images/Section_2/Slide1/test2.png);
 	}
-
+*/
 
 	/*SECTION_3*/
 
@@ -736,10 +797,11 @@ backface-visibility: hidden;
 	background-image: url(../images/Section_4/bgSection3.png); 
 	background-position: center;	
 	background-size: cover;
+	height: 600px !important;
 }
 
 .title_3s {
-	font-size: 36px;
+	font-size: 20px;
 	border-bottom: 2px solid #f1c54b;
 	font-weight: bold;
 	display: inline-block;
@@ -747,32 +809,33 @@ backface-visibility: hidden;
 }
 
 .angle-background {
-	height: 278px;
-	width: 430px;	
-	background: rgba(0, 0, 0, 0) 
-	url("../images/Section_4/border.png")
-	no-repeat scroll left top;
-	background-position: 0 0;
-	font-family: 'Roboto Light';
-	display: inline-block;
+    margin-top: 25px;
+    height: 195px;
+    width: 305px;
+    background: rgba(0, 0, 0, 0) url("../images/Section_4/border768px60pr.png") no-repeat scroll left top;
+    background-position: 0 0;
+    font-family: 'Roboto';
+    display: inline-block;
 }
 
 .ten_square {
-	height: 100px;
-	width: 100px;
+	height: 70px;
+	width: 70px;
 	border: 2px solid #f1c54b;
-	font-size: 46px;
-	line-height: 98px;
+	font-size: 34px;
+	line-height: 65px;
+	position: absolute;
 }
 
 .right_text {
-	float: right;
-	font-size: 30px;
-	font-weight: normal;
-	line-height: 1.2;
-	text-align: left;
-	overflow: auto;
-	width: 264px;
+    position: relative;
+    right: -89px;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    overflow: auto;
+    width: 195px;
 }
 
 .right_text a {
@@ -783,7 +846,7 @@ backface-visibility: hidden;
 
 /* Стили формы */
 #callback_form {
-	width: 400px;
+	width: 270px;
 	margin: 0 auto;
 	font-weight: 400;
 	display: inline-block;
@@ -792,18 +855,18 @@ backface-visibility: hidden;
 /*Стили полей для ввода*/
 #callbackName, #callbackPhone, #callbackBody {
 	width: 100%;
-	height: 50px;
+	height: 35px;
 	background: none;
-	margin-top: 25px;
+	margin-top: 15px;
 	border: 2px solid #f1c54b;
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 	text-align: left;
 	text-indent: 15px;
 }
 
 #callbackBody {
-	height: 150px !important;
+	height: 110px !important;
 	padding: 15px;
 	text-indent: 0;
 }
@@ -826,10 +889,11 @@ backface-visibility: hidden;
 	margin-top: 25px;
 	border: none;
 	width: 100%;
-	height: 45px;
+	height: 40px;
 	color: #fff;
-	font-size: 20px;
-	font-family: 'Roboto Medium';
+	font-size: 16px;
+	font-family: 'Roboto';
+	font-weight: 400;
 	cursor: pointer;
 	background: none;
 	border: 2px solid #f1c54b;
@@ -861,6 +925,90 @@ backface-visibility: hidden;
 	outline: none;
 }
 
+.SubmitFormButton3 {
+	border: none;
+	margin-top: 25px;
+	width: 100%;
+	height: 45px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	background: none;
+	border: 2px solid #f1c54b;
+	font-family: 'Roboto';
+	font-weight: 400;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	padding-left: 50px;
+}
+
+.SubmitFormButton3:before{
+	position: absolute;
+    left: 18%;
+    top: 25%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    content: url(../images/envelope.png) ;
+	}
+
+	.SubmitFormButtonHover3:hover{
+		background-color: #f1c54b;
+		color: #333;
+		-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	}
+
+
+	.SubmitFormButton3:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	}
+
+	.SubmitFormButton3:hover:before{
+	position: absolute;
+    left: 18%;
+    top: 25%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    content: url(../images/envelope333.png) ;
+	}
+
+	.btn_success3{
+		color: transparent !important;
+		background-color: #f1c54b;
+	}
+
+	.btn_success3:before{
+	position: absolute;
+    left: 30% !important;
+    top: 18% !important; 
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	content: url(../images/thumbs.png) !important; 
+
+	}
+	.btn_success3:after{
+		color: #333;
+		position: absolute;
+		left: 40%;
+		top:20%;
+		z-index: 1;
+		content: 'Отправлено!';
+		-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    animation: moveUp 0.5s;
+}
+
 /*SECTION4*/
 
 #section5 {
@@ -873,32 +1021,30 @@ backface-visibility: hidden;
 
 .title_4s {
 	height: 391px;
-	width: 800px;
-	background: rgba(0, 0, 0, 0) 
-	url("../images/Section_5/border.png")
-	no-repeat scroll left top;
-	background-position: 80px 0;
+	width: 254px;
 	position: relative;
 	display: inline-block;
 }
 
 .title_4s h2 {
 	line-height: 1.3;
-	font-size: 24px !important;
-	font-family: 'Roboto Light';
+	font-size: 15px !important;
+	font-family: 'Roboto';
+	font-weight: 300;
 	text-align: center;
 }
 
 .title_4s .upper {
-	font-size: 36px;
-	font-family: 'Roboto Medium';
+	font-size: 21px;
+	font-family: 'Roboto';
+	font-weight: 500;
 	text-transform: uppercase;
 }
 
 #callback_btn_2 {
-	position: absolute; 
-	right: 0;
-	bottom: 0;
+	position: absolute;
+    right: 73px;
+    bottom: -6px;
 }
 
 #callback_btn_2 a span{
@@ -916,13 +1062,14 @@ backface-visibility: hidden;
 	background-image: url(../images/Section_6/background.png); 
 	background-position: center;	
 	background-size: cover;
+	height: 470px !important;
 }
 
 /*CALLBACK_FORM*/
 
 /* Стили формы */
 #callback_form_main {
-	width: 600px;
+	width: 240px;
 	margin: 0 auto;
 	display: inline-block;
 }
@@ -930,13 +1077,13 @@ backface-visibility: hidden;
 /*Стили полей для ввода*/
 #callback_form_main input{
 	width: 100%;
-	height: 50px;
+	height: 33px;
 	background: none;
 	margin-top: 25px;
 	border: none;
 	border-bottom: 2px solid #f1c54b;
 	color: white;
-	font-size: 20px;
+	font-size: 14px;
 	text-align: left;
 	text-indent: 15px;
 }
@@ -944,12 +1091,12 @@ backface-visibility: hidden;
 /*Стили полей для ввода*/
 #callbackName_main, #callbackPhone_main, #callbackBody_main {
 	width: 100%;
-	height: 50px;
+	height: 33px;
 	background: none;
 	margin-top: 25px;
 	border-bottom: 2px solid #f1c54b;
 	color: white;
-	font-size: 20px;
+	font-size: 14px;
 	text-align: left;
 	text-indent: 15px;
 }
@@ -976,14 +1123,15 @@ backface-visibility: hidden;
 /*Стили для кнопки*/
 .SubmitFormButton {
 	margin-top: 25px;
-	width: 300px;
+	width: 240px;
 	height: 45px;
 	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	background: none;
 	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -1046,8 +1194,8 @@ backface-visibility: hidden;
 	.btn_success:after{
 		color: #333;
 		position: absolute;
-		left: 40%;
-		top:20%;
+		left: 45%;
+		top:30%;
 		z-index: 1;
 		content: 'Отправлено!';
 		-webkit-transition: all 0.3s;
@@ -1091,21 +1239,26 @@ backface-visibility: hidden;
 }
 
 
+#btnCalculate:hover{
 
+	background-color: #f1c54b !important;
+
+}
+#btnCalculate:active{
+	background-color: #f9d164 !important;
+}
 
 
 
 /*FOOTER*/
-
-.footer {
-	width: 100%;
-	height: 50px;
-	position: absolute;
-	bottom: 0;
+.footer a{
+	color: #eee;
 }
 
-.footer div {
-	width: 100%;
+
+.contacts{
+	margin-top: 40px;
+	margin-bottom: 5px;
 }
 
 .right_border {
@@ -1124,13 +1277,12 @@ backface-visibility: hidden;
  }
 
  .content_popup {
- 	height: 460px;
-	width: 359px;
-	margin: 0 auto;
-	background: rgba(0, 0, 0, 0) 
-	url("../images/Popup_callback/border.png")
-	no-repeat scroll left top;
-	background-position: 0 10px;
+ 	font-size: 16px !important;
+    height: 463px;
+    width: 286px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0) url("../images/Popup_callback/border_70pr.png") no-repeat scroll left top;
+    background-position: 18px 10px;
  }
 
  /*POPUP_CALLBACK*/
@@ -1138,30 +1290,31 @@ backface-visibility: hidden;
  #callback_popup,
  #coast_popup {
  	background-color:white;
- 	width: 400px;
- 	height: 600px;
+ 	width: 292px;
+    height: 459px;
  }
 
 
  /*CALLBACK_FORM*/	
 
 #callback_form_popup {
-	width: 300px;
-	margin: 0 auto;
-	display: inline-block;
+	width: 286px;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 #callback_form_popup input{
-	width: 100%;
-	height: 50px;
-	background: none;
-	margin-top: 35px;
-	border: none;
-	border: 2px solid #f1c54b;
-	color: black !important;
-	font-size: 20px;
-	text-align: left;
-	text-indent: 15px;
+    width: 61%;
+    height: 34px;
+    background: none;
+    margin-top: 28px;
+    border: none;
+    border: 2px solid #f1c54b;
+    color: black !important;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 15px;
+}
 }
 
 #callback_form_popup input:focus 
@@ -1180,7 +1333,8 @@ backface-visibility: hidden;
 	display: inline-block;
 	background: none;
 	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -1189,14 +1343,15 @@ backface-visibility: hidden;
 
 .callbackButton_popup {
 	color: rgb(152, 150, 150);
-	background: white !important;
-	margin-top: 45px;
-	width: 250px;
-	height: 45px;
-	cursor: pointer;
-	display: inline-block;
-	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+    background: white !important;
+    margin-top: 27px;
+    width: 185px;
+    height: 32px;
+    cursor: pointer;
+    display: inline-block;
+    border: 2px solid #f1c54b;
+    font-family: 'Roboto';
+    font-weight: 400;
 }
 
 .SubmitFormButton2:before{
@@ -1255,7 +1410,7 @@ backface-visibility: hidden;
 	.btn_success2:after{
 		color: #333;
 		position: absolute;
-		left: 28%;
+		left: 30%;
     top: 10%;
 		z-index: 1;
 		content: 'Отправлено!';
@@ -1269,8 +1424,8 @@ backface-visibility: hidden;
 
  #coast_popup {
  	background-color:white;
- 	width: 400px;
- 	height: 600px;
+ 	width: 292px;
+    height: 459px;
  	line-height: 24px;
  }
 
@@ -1299,7 +1454,7 @@ backface-visibility: hidden;
 .colCheckBox input[type="checkbox"] + label {
     background: url(../images/Popup_coast/background_checkbox.png) 0 0 no-repeat;
     padding-left: 35px;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 .colCheckBoxRight input[type="checkbox"]:checked + label,
@@ -1321,35 +1476,33 @@ backface-visibility: hidden;
 
  .checkBoxRow {
  	font-size: 16px;
- 	margin-top: 25px;
+ 	margin-top: 19px;
  }
 
- #coast_form select {
- 	font-family: 'Roboto Medium';
- 	width: 100%;
- 	height: 50px;
- 	background: none;
- 	margin-top: 25px;
- 	border: 2px solid #f1c54b;
- 	color: black !important;
- 	font-size: 20px;
- 	text-align: left;
- 	text-indent: 5px;
- }
-
-.element {
-	background: url(../images/Popup_coast/element.png) 0 0 no-repeat;
-	height: 14px;
-	margin-top: 30px;
+#coast_form select {
+    font-family: 'Roboto';
+    font-weight: 400;
+    width: 100%;
+    height: 33px;
+    background: none;
+    margin-top: 25px;
+    border: 2px solid #f1c54b;
+    color: black !important;
+    font-size: 16px;
+    text-align: left;
+    text-indent: 5px;
 }
+
 
 #result {
-	margin: 0;
-	margin-top: 25px;
-	font-family: 'Roboto Medium';
-	font-size: 48px;
+    margin: 0;
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 35px;
+    position: relative;
+    top: -10px;
 }
-
  /*Стили полей при клике по ним*/
  #coast_form select:focus
  {
@@ -1365,14 +1518,15 @@ backface-visibility: hidden;
  /*Стили для кнопки*/
  .coastButton_popup {
  	background: white !important;
- 	margin-top: 70px;
+ 	margin-top: 42px;
  	width: 230px;
  	height: 45px;
  	color: black;
  	cursor: pointer;
  	display: inline-block;
  	border: 2px solid #f1c54b;
- 	font-family: 'Roboto Medium';
+ 	font-family: 'Roboto';
+ 	font-weight: 400;
  	font-size: 24px;
  }
 

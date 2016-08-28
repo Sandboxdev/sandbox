@@ -1,34 +1,49 @@
 @import "http://webfonts.ru/import/opensans.css";
 @import "http://webfonts.ru/import/roboto.css";
 @import "http://webfonts.ru/import/kelson.css";
+@import "http://webfonts.ru/import/intro.css";
 
-@font-face {
-	font-family: Roboto-Light; /* Гарнитура шрифта */
-	src: url(../fonts/Roboto-Light.ttf); /* Путь к файлу со шрифтом */
-}
-@font-face {
-	font-family: Intro; /* Гарнитура шрифта */
-	src: url(../fonts/Intro.otf); /* Путь к файлу со шрифтом */
-}
-@font-face {
-	font-family: Roboto-Medium; /* Гарнитура шрифта */
-	src: url(../fonts/Roboto-Medium.ttf); /* Путь к файлу со шрифтом */
-}
 
-.fp-section,
-.fp-slide,
-.fp-tableCell{
-    height: auto !important;
+
+html{
+	font-size: 100%;
 }
 
 body{
 	background-color: #d7d7d7;
 	font-family: 'Roboto';
 	color: #fff;
-	font-size: 1.8em;
+	font-size: 0.94rem;
 	font-weight: 300;
 	margin: 0;
+
 }
+
+
+/*LOADER*/
+#before-load {
+  position: fixed; /*фиксированное положение блока*/
+  left: 0; /*положение элемента слева*/
+  top: 0; /*положение элемента сверху*/
+  right: 0; /*положение элемента справа*/
+  bottom: 0; /*положение элемента снизу*/
+  background: #eee; /*цвет заднего фона блока*/
+  z-index: 999999999; /*располагаем его над всеми элементами на странице*/
+}
+.load-cont span {
+	display: inline-block !important;
+    width: 120px; /*ширина gif-изображения*/
+    height: 120px; /*высота gif-изображения*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('../images/gif.gif') no-repeat  50% 50%; /*расположение (url) изображения gif и др. параметры*/
+    margin: -85px 0 0 -85px;
+}
+
+
+
+
 
 .sandbox_color {
 	color: #f1c54b;
@@ -46,7 +61,8 @@ body{
 	height: 45px;
 	border: 2px solid #f1c54b;
 	line-height: 43px;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 }
 
 .a_button {
@@ -79,20 +95,20 @@ body{
 
 h2{
 	font-weight: 300;
-	font-size: 36px;
+	font-size: 1.875rem;
 }
 h3{
-	font-size: 18px;
+	font-size: 1rem;
 	font-weight: 100;
 }
 
 h4{
-	font-size: 20px;
+	font-size: 1.0625rem;
     font-weight: 400;
 }
 
 h5{
-	font-size: 24px;
+	font-size: 1.25rem;
 	font-weight: 100;
 	color: #f1c54b;
 	margin-top: 50px;
@@ -278,8 +294,6 @@ h5{
 	background-position: 40px 0;
 	line-height: 1.3;
 	font-size: 24px;
-	font-weight: 300;
-	font-family: 'Roboto Light';
 	padding: 25px 0 25px 0;
 }
 
@@ -353,6 +367,10 @@ h5{
 
 #buttons_1s .left_btn {
 	margin-left: 30px;
+}
+
+#but_1s{
+	width: 440px;
 }
 
 /*CALLBACK*/
@@ -501,7 +519,7 @@ backface-visibility: hidden;
 		margin-top: 42px;
 	}
 	.serviceUl{
-		font-size: 16px;
+		font-size: 0.8125rem;
 		padding-left: 31px;
 		text-align: left;
 		list-style-image: url(../images/Section_2/Slide1/icons/marker.png);
@@ -581,55 +599,56 @@ backface-visibility: hidden;
 }
 
 .steps_block {
+	background-position: 0 !important;
 	position: relative;
-	width: 722px;
-	height: 225px;
-	background: url(../images/Section_2/Slide2/lines.png) no-repeat scroll;
+	width: 578px;
+	height: 180px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 60px;
 }
 
 .steps_block div {
-	width: 95px;
+	font-size: 14px;
+	width: 76px;
 	height: 130px;
 	position: absolute;
 	padding-top: 100px;
 }
 
 .icon_1 {
-	background: url(../images/Section_2/Slide2/icon_1.png) no-repeat scroll;
-	left: 72px;
-	top: 103px;
+	background: url(../images/Section_2/Slide2/icon_1_992px80pr.png) no-repeat scroll;
+	left: 58px;
+	top: 83px;
 }
 
 .icon_2 {
-	background: url(../images/Section_2/Slide2/icon_2.png) no-repeat scroll;
-	left: 171px;
-	top: 85px;
+	background: url(../images/Section_2/Slide2/icon_2_992px80pr.png) no-repeat scroll;
+	left: 137px;
+	top: 68px;
 }
 
 .icon_3 {
-	background: url(../images/Section_2/Slide2/icon_3.png) no-repeat scroll;
-	left: 270px;
-	top: 58px;
+	background: url(../images/Section_2/Slide2/icon_3_992px80pr.png) no-repeat scroll;
+	left: 215px;
+	top: 47px;
 }
 
 .icon_4 {
-	background: url(../images/Section_2/Slide2/icon_4.png) no-repeat scroll;
-	left: 364px;
-	top: 35px;
+	background: url(../images/Section_2/Slide2/icon_4_992px80pr.png) no-repeat scroll;
+	left: 291px;
+	top: 28px;
 }
 
 .icon_5 {
-	background: url(../images/Section_2/Slide2/icon_5.png) no-repeat scroll;
-	left: 461px;
-	top: 14px;
+	background: url(../images/Section_2/Slide2/icon_5_992px80pr.png) no-repeat scroll;
+	left: 369px;
+	top: 11px;
 }
 
 .icon_6 {
-	background: url(../images/Section_2/Slide2/icon_6.png) no-repeat scroll;
-	left: 561px;
+	background: url(../images/Section_2/Slide2/icon_6_992px80pr.png) no-repeat scroll;
+	left: 450px;
 	top: 1px;
 }
 
@@ -638,7 +657,7 @@ backface-visibility: hidden;
 }
 
 #slide3 p{
-	font-size: 18px;
+	font-size: 0.9375rem;
 	font-weight: 100;
 
 }
@@ -667,7 +686,7 @@ backface-visibility: hidden;
 		    border: 2px solid #f1c54b;
 		    padding: 10px 0 10px 0;
 		    margin: 17px 0 22px 0;
-		    font-size: 18px;
+		    font-size: 1rem;
 		    color: #fff;
 		    font-weight: 400;
 		    display:block;
@@ -698,7 +717,7 @@ backface-visibility: hidden;
     top: 30%;
 }
 
-	#slide1:before{
+	/*#slide1:before{
 		content: '';
     display: block;
     position: absolute;
@@ -721,7 +740,7 @@ backface-visibility: hidden;
     height: 104px;
     background-image: url(../images/Section_2/Slide1/test2.png);
 	}
-
+*/
 
 	/*SECTION_3*/
 
@@ -753,7 +772,7 @@ backface-visibility: hidden;
 	url("../images/Section_4/border.png")
 	no-repeat scroll left top;
 	background-position: 0 0;
-	font-family: 'Roboto Light';
+	font-family: 'Roboto';
 	display: inline-block;
 }
 
@@ -766,9 +785,10 @@ backface-visibility: hidden;
 }
 
 .right_text {
+	position: initial;
 	float: right;
 	font-size: 30px;
-	font-weight: normal;
+	font-weight: 300;
 	line-height: 1.2;
 	text-align: left;
 	overflow: auto;
@@ -829,7 +849,8 @@ backface-visibility: hidden;
 	height: 45px;
 	color: #fff;
 	font-size: 20px;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	cursor: pointer;
 	background: none;
 	border: 2px solid #f1c54b;
@@ -861,6 +882,90 @@ backface-visibility: hidden;
 	outline: none;
 }
 
+.SubmitFormButton3 {
+	border: none;
+	margin-top: 25px;
+	width: 100%;
+	height: 45px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	background: none;
+	border: 2px solid #f1c54b;
+	font-family: 'Roboto';
+	font-weight: 400;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	padding-left: 50px;
+}
+
+.SubmitFormButton3:before{
+	position: absolute;
+    left: 25%;
+    top: 25%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    content: url(../images/envelope.png) ;
+	}
+
+	.SubmitFormButtonHover3:hover{
+		background-color: #f1c54b;
+		color: #333;
+		-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	}
+
+
+	.SubmitFormButton3:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	}
+
+	.SubmitFormButton3:hover:before{
+	position: absolute;
+    left: 25%;
+    top: 25%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    content: url(../images/envelope333.png) ;
+	}
+
+	.btn_success3{
+		color: transparent !important;
+		background-color: #f1c54b;
+	}
+
+	.btn_success3:before{
+	position: absolute;
+    left: 30%;
+    top: 18% !important; 
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+	content: url(../images/thumbs.png) !important; 
+
+	}
+	.btn_success3:after{
+		color: #333;
+		position: absolute;
+		left: 40%;
+		top:20%;
+		z-index: 1;
+		content: 'Отправлено!';
+		-webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    animation: moveUp 0.5s;
+}
+
 /*SECTION4*/
 
 #section5 {
@@ -885,17 +990,20 @@ backface-visibility: hidden;
 .title_4s h2 {
 	line-height: 1.3;
 	font-size: 24px !important;
-	font-family: 'Roboto Light';
+	font-family: 'Roboto';
+	font-weight: 300;
 	text-align: center;
 }
 
 .title_4s .upper {
 	font-size: 36px;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 500;
 	text-transform: uppercase;
 }
 
 #callback_btn_2 {
+	width: 200px;
 	position: absolute; 
 	right: 0;
 	bottom: 0;
@@ -983,7 +1091,8 @@ backface-visibility: hidden;
 	display: inline-block;
 	background: none;
 	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -1091,17 +1200,29 @@ backface-visibility: hidden;
 }
 
 
+#btnCalculate:hover{
 
+	background-color: #f1c54b !important;
+
+}
+#btnCalculate:active{
+	background-color: #f9d164 !important;
+}
 
 
 
 /*FOOTER*/
 
 .footer {
+	margin-bottom: 25px;
 	width: 100%;
 	height: 50px;
 	position: absolute;
 	bottom: 0;
+}
+
+.footer a {
+    color: #eee;
 }
 
 .footer div {
@@ -1137,6 +1258,8 @@ backface-visibility: hidden;
 
  #callback_popup,
  #coast_popup {
+ 	font-weight: 500;
+ 	font-size: 24px !important;
  	background-color:white;
  	width: 400px;
  	height: 600px;
@@ -1180,7 +1303,8 @@ backface-visibility: hidden;
 	display: inline-block;
 	background: none;
 	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -1196,7 +1320,8 @@ backface-visibility: hidden;
 	cursor: pointer;
 	display: inline-block;
 	border: 2px solid #f1c54b;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 }
 
 .SubmitFormButton2:before{
@@ -1299,7 +1424,7 @@ backface-visibility: hidden;
 .colCheckBox input[type="checkbox"] + label {
     background: url(../images/Popup_coast/background_checkbox.png) 0 0 no-repeat;
     padding-left: 35px;
-    font-weight: 100;
+    font-weight: 00;
 }
 
 .colCheckBoxRight input[type="checkbox"]:checked + label,
@@ -1325,7 +1450,8 @@ backface-visibility: hidden;
  }
 
  #coast_form select {
- 	font-family: 'Roboto Medium';
+ 	font-family: 'Roboto';
+ 	font-weight: 400;
  	width: 100%;
  	height: 50px;
  	background: none;
@@ -1344,9 +1470,11 @@ backface-visibility: hidden;
 }
 
 #result {
+	margin-bottom: 12px !important;
 	margin: 0;
 	margin-top: 25px;
-	font-family: 'Roboto Medium';
+	font-family: 'Roboto';
+	font-weight: 400;
 	font-size: 48px;
 }
 
@@ -1372,7 +1500,8 @@ backface-visibility: hidden;
  	cursor: pointer;
  	display: inline-block;
  	border: 2px solid #f1c54b;
- 	font-family: 'Roboto Medium';
+ 	font-family: 'Roboto';
+ 	font-weight: 400;
  	font-size: 24px;
  }
 

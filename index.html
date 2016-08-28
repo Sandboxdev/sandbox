@@ -4,7 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SandBox - Разработка современных веб-приложений </title>
+  <meta name="description" content="
+  Sandbox development – молодая компания, главной целью которой является разработка и продвижение сайтов. На нашем сайте можно заказать сайт под ключ, а также продвижение сайтов в любой сфере. Создание сайтов в Минске.">
+
+  <title>Sandbox - Разработка и создание сайтов под ключ | Продвижение сайтов</title>
 
   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
@@ -14,6 +17,8 @@
 
   <!--Animate.css-->
   <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+  <link rel="stylesheet"  href="css/animation.css" />
+
 
   <!--LightCase-->
   <link rel="stylesheet" href="bower_components/lightcase/src/css/lightcase.css">
@@ -22,10 +27,25 @@
   <link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullpage.css">
 
   <!--Medeia-->
-  <link rel="stylesheet" media="screen and (min-width:768px)" href="css/768pxAndMore.css" />
+  <link rel="stylesheet" media="screen and (max-width:480px)" href="css/480px-.css" />
+  <link rel="stylesheet" media="screen and (min-width:480px)" href="css/480px+.css" />
+  <link rel="stylesheet" media="screen and (min-width:768px)" href="css/768px+.css" />
+  <link rel="stylesheet" media="screen and (min-width:992px)" href="css/992px+.css" />
+  <link rel="stylesheet" media="screen and (min-width:1200px)" href="css/1200px+.css" />
 
 </head>
 <body>
+
+  <!-- PRELOADER -->
+  <!-- Блок, который будет отображаться над страницей -->
+  <div id="before-load">
+
+    <div class="load-cont">
+      <span></span>
+    </div>
+
+  </div>
+  <!-- END / PRELOADER -->
 
   <div class="container-fluid" id="header">
     <div class="navbar navbar-default navbar-fixed-top">
@@ -41,20 +61,20 @@
         <div class="collapse navbar-collapse" id="responsive-menu">
           <div class="container-fluid">
             <div class="row" style="padding-top:20px;padding-bottom:20px">
-              <div class="col-lg-2 col-md-2 col-sm-2 col-lg-offset-1">
-                <a href="#"><img src="images/logo.png" class="img-responsive" alt="logo"></a>
+              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2  col-md-offset-1 col-lg-offset-1">
+                <a href="#"><img src="images/logo.png" class="img-responsive" alt="Sandbox development"></a>
               </div>
-              <div class="col-lg-6 col-md-8 col-sm-8 text-center">
+              <div class=" col-xs-8 col-sm-8 col-md-6 col-lg-6 text-center">
                 <ul class="nav navbar-nav" id="navLeft">
                   <li data-menuanchor="firstSection"><a href="#firstSection">Главная</a></li>
                   <li data-menuanchor="secondSection"><a href="#secondSection"  id="navbarAbout">Услуги</a></li>
-                  <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Портфолио</a></li>
+                  <!-- <li data-menuanchor="3rdSection"><a href="#3rdSection" id="navbarService">Портфолио</a></li> -->
                   <li data-menuanchor="5rdSection"><a href="#5rdSection"  id="navbarPortfolio">О нас</a></li>
                   <li data-menuanchor="6rdSection"><a href="#6rdSection"  id="navbarContacts">Контакты</a></li>
                 </ul>
               </div>
               <!--TOGLER-BUTTON-->
-              <div class="col-lg-2 col-md-2 col-sm-2 text-center buttLang" style="height: 42px;">
+              <div class=" col-xs-2 col-sm-2 col-md-2 col-lg-2  text-center buttLang" style="height: 42px;">
                 <div style="display: inline-block; margin-top:2%;" id="a22222">
                   <div id="togler-button">
                     <span id="rus">Рус</span>
@@ -74,7 +94,7 @@
 
   <section id="mainSection">
 
-    <section class="section" id="section1">
+    <section class="section " id="section1">
 
       <div id="scene" class="scene">
         <div class="layer layer-header-parallax header-parallax_1" data-depth="0.2"></div>
@@ -82,20 +102,20 @@
         <div class="layer layer-header-parallax header-parallax_3" data-depth="0.1"></div>
         <div class="layer layer-header-parallax header-parallax_4" data-depth="0.25"></div>
         <div class="layer layer-header-parallax header-parallax_5" data-depth="0.5"></div>
-        <div class="layer layer-header-parallax">
+        <div class="layer layer-header-parallax " id="anim1">
           <div class="container-fluid">
 
             <div class="center-vertically">
 
               <div class="row">
-                <div class="col-lg-11 col-lg-offset-1">
-                  <h2 id="title_1s">
+                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                  <h1 id="title_1s">
                     <span class="upper">
-                      разработка современных
+                    разработка и
                     </span>
                     <br>
                     <span class="upper sandbox_color">
-                      веб-приложений
+                      продвижение сайтов
                     </span>
                     <br>
                     <span style="display: inline-block; padding-top:10px;">
@@ -105,13 +125,13 @@
                         Мы создаем современные, оригинальные и смелые проекты.
                       </span>
                     </span>
-                  </h2>              
+                  </h1>              
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-lg-5 col-lg-offset-1" id="buttons_1s">
-                  <div style="width: 440px;">
+                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" id="buttons_1s">
+                  <div id="but_1s" >
                     <div class="right_btn text-center button_style btn_next">
                       <a href="#secondSection" class="a_button"><span style="display: inline-block;">Далее</span></a>
                     </div>
@@ -121,6 +141,7 @@
                   </div>
                 </div>
               </div>
+              
 
             </div>
 
@@ -128,7 +149,7 @@
               <div id="callback_block">
                 <div class="right_block">
                   <div>
-                    +375(25)-925-13-54
+                    +375(25)-925-13-54 <br>
                     +375(25)-791-65-67
                   </div>
                 </div>
@@ -142,9 +163,9 @@
       </div>
 
 
-      <div id="callback_popup" style="color: #989696; font-size: 24px; font-family: 'Roboto Medium';">
-        <div style="margin: 30px 0 30px 0;">
-          <image src="images/Popup_callback/logo.png" class="logo_popup"></image>
+      <div id="callback_popup" style="color: #989696; font-size: 16px; font-family: 'Roboto';">
+        <div style="margin: 30px 0 20px 0;">
+          <image src="images/Popup_callback/logo.png" class="logo_popup" alt="Sandbox development"></image>
         </div>
         <div class="content_popup" style="text-align: center;" >
           <span style="display: inline-block;color:black;"><i class="fa fa-phone" aria-hidden="true"></i>+375(25)925-13-54</span>
@@ -163,7 +184,7 @@
 
 
     <!--СЕКЦИЯ 2-->
-    <section id="section2" class="section">
+    <section id="section2" class="section ">
 
       <video autoplay loop muted id="myVideo">
         <source src="images/Hello-World.mp4" type="video/mp4">
@@ -171,24 +192,24 @@
           </video>
 
           <!--Первый слайд-->
-          <div class="slide" id="slide1" data-anchor="slide1">
+          <div class="slide " id="slide1" data-anchor="slide1">
 
             <div class="container contentSlider">
 
-              <div class="row">
-                <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
-                  <h2 id="test1">Наши услуги</h2>
+              <div class="row" id="firstSlideHeader">
+                <div class="col-sm-8 col-xs-10 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-1">
+                  <h2>Наши услуги</h2>
                   <h3>В основу наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво» просто так — мы делаем «красиво», которое зарабатывает вам деньги.</h3>
                 </div>
               </div>  <!--end row-->
 
               <div class="row" id="serviseDiv">
 
-                <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6 col-sm-offset-3 col-xs-offset-3 col-md-offset-3 col-lg-offset-3 text-center">
+                <div class="col-sm-8 col-xs-12 col-md-6 col-lg-6 col-sm-offset-2  col-md-offset-3 col-lg-offset-3 text-center">
 
                   <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 serviceBorder">
                     <img src="images/Section_2/Slide1/icons/webDesignIcon.png" alt="ic1" class="img-responsive icons">
-                    <h4>Веб разработка</h4>
+                    <h4>Веб-разработка</h4>
                     <ul class="serviceUl">
                       <li>Сайт-визитка</li>
                       <li>Интернет-магазины</li>
@@ -197,8 +218,8 @@
                       <br>
                     </ul>
                   </div>
-                  <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 serviceBorder">
-                    <img src="images/Section_2/Slide1/icons/webDesignIcon2.png" alt="ic2"  class="img-responsive icons" id="designIcon">
+                  <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 serviceBorder" >
+                    <img src="images/Section_2/Slide1/icons/webDesignIcon2.png" alt="ic2"  class="img-responsive icons" id="designIcon" style="width:65px">
                     <h4>Дизайн</h4>
                     <ul class="serviceUl">
                       <li>Прототипы</li>
@@ -222,7 +243,7 @@
               </div> <!--end row-->
 
               <div class="row text-center">
-                <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-sm-offset-5 col-xs-offset-5 col-md-offset-5 col-lg-offset-5 text-center">
+                <div class="col-sm-2 col-xs-6 col-md-2 col-lg-2 col-sm-offset-5 col-xs-offset-3 col-md-offset-5 col-lg-offset-5 text-center">
                   <a href="#" class="a_button buttonZakazat callback_popup_open btn_eff">Заказать</a>
                 </div>
               </div> <!--end row-->
@@ -231,87 +252,87 @@
 
           </div>
 
-         <!--Второй слайд-->
-        <div class="slide" id="slide2" data-anchor="slide2">
-          <div class="container-fluide contentSlider" style="padding-top: 10%;">
-            <div class="row">
-              <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
-                <h2>Этапы разработки проекта</h2>
-                <h3>Наши дизайнеры и разработчики  действуют как единый, слаженный механизм на протяжении всего процесса работы, что позволяет нам эффективно создавать решения и реализовывать самые сложные задачи для любой индустрии бизнеса.</h3>
-              </div>
-            </div>
-            <div class="bg_steps">
-              <div class="steps_block">
-                <div class="icon_1">
-                  Заказ
-                </div>
-                <div class="icon_2">
-                  Обсуждение
-                </div>
-                <div class="icon_3">
-                  Прототип
-                </div>
-                <div class="icon_4">
-                  Дизайн
-                </div>
-                <div class="icon_5">
-                  Разработка
-                </div>
-                <div class="icon_6">
-                  Оптимизация
+          <!--Второй слайд-->
+          <div class="slide" id="slide2" data-anchor="slide2">
+            <div class="container-fluide contentSlider" style="padding-top: 10%;">
+              <div class="row" id="slider2Header">
+                <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">
+                  <h2>Этапы разработки проекта</h2>
+                  <h3>Мы действуем как единый, слаженный механизм на протяжении всего процесса работы, что позволяет нам эффективно создавать решения и реализовывать самые сложные задачи для любой индустрии бизнеса.</h3>
                 </div>
               </div>
-            </div>
-          </div>  
-        </div>
-
-           <!--Третий слайд-->
-        <div class="slide" id="slide3" data-anchor="slide3">
-
-          <div class="container">
-
-            <div class="row">
-              <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 text-center">
-                <h2>Сколько стоит?</h2>
-              </div>
-            </div>  <!--end row-->
-
-            <div class="row">
-              <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="first">
-                <h5>Порталы и Сервисы</h5>
-                <p>Основные отличия веб-портала от обычного сайта это -хранение неограниченных объемов любого контента.<br>
-                  Стоимость от  <span style="color:#f1c54b">700$</span>.</p>
+              <div class="bg_steps">
+                <div class="steps_block">
+                  <div class="icon_1">
+                    Заказ
+                  </div>
+                  <div class="icon_2">
+                    Обсуждение
+                  </div>
+                  <div class="icon_3">
+                    Прототип
+                  </div>
+                  <div class="icon_4">
+                    Дизайн
+                  </div>
+                  <div class="icon_5">
+                    Разработка
+                  </div>
+                  <div class="icon_6">
+                    Оптимизация
+                  </div>
                 </div>
+              </div>
+            </div>  
+          </div>
 
-                <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5" id="second">
-                  <h5>Сайт-визитка</h5>
-                  <p>Это, как правило, простой сайт, содержащий общую информацию о компании и роде оказываемых услуг.<br>
-                    Стоимость от <span style="color:#f1c54b">250$</span>.</p>
+          <!--Третий слайд-->
+          <div class="slide" id="slide3" data-anchor="slide3">
+
+            <div class="container">
+
+              <div class="row" id="slide3Header">
+                <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2 text-center">
+                  <h2>Сколько стоит?</h2>
+                </div>
+              </div>  <!--end row-->
+
+              <div class="row">
+                <div class="col-sm-4 col-xs-5 col-md-4 col-lg-5 col-lg-offset-1 col-md-offset-2 col-sm-offset-2 col-xs-offset-1" id="first">
+                  <h5>Порталы и Сервисы</h5>
+                  <p>Основные отличия веб-портала от обычного сайта это хранение неограниченных объемов любого контента.<br>
+                    Стоимость от  <span style="color:#f1c54b">700$</span>.</p>
                   </div>
 
-                </div>  <!--end row-->
-
-                <div class="row">
-                  <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1" id="third">
-                    <h5>Интернет-магазины</h5>
-                    <p>Это возможность познакомить клиентов с вашими товарами и услугами, но самое главное — дает возможность совершить покупку, не отходя от компьютера.<br>Стоимость от <span style="color:#f1c54b">500$</span>.</p>
-                  </div>
-
-                  <div class="col-sm-5 col-xs-5 col-md-5 col-lg-5" id="fourth">
-                    <h5>Landing-page</h5>
-                    <p>Landing page - сайт, который продает. Разработаем сайт, который привлечет новых клиентов к Вашей услуге, товару, событию. 
-                      <br>Стоимость от <span style="color:#f1c54b">300$</span>.</p>
+                  <div class="col-sm-4 col-xs-5 col-md-4 col-lg-5" id="second">
+                    <h5>Сайт-визитка</h5>
+                    <p>Это, как правило, простой сайт, содержащий общую информацию о компании и роде оказываемых услуг.<br>
+                      Стоимость от <span style="color:#f1c54b">250$</span>.</p>
                     </div>
 
                   </div>  <!--end row-->
 
                   <div class="row">
-                    <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 text-center">
-                      <a href="#" class="a_button buttonPrice coast_popup_open">Расчитать</a>
+                    <div class="col-sm-4 col-xs-5 col-md-4 col-lg-5 col-lg-offset-1 col-md-offset-2 col-sm-offset-2 col-xs-offset-1" id="third">
+                      <h5>Интернет-магазины</h5>
+                      <p>Это возможность познакомить клиентов с вашими товарами и услугами, но самое главное — дает возможность совершить покупку, не отходя от компьютера.<br>Стоимость от <span style="color:#f1c54b">500$</span>.</p>
                     </div>
 
-                      <div class="col-sm-2 col-xs-2 col-md-2 col-lg-2 text-center">
-                        <a href="#3rdSection" class="a_button buttonPrice btn_next" id="next2">Далее</a>
+                    <div class="col-sm-4 col-xs-5 col-md-4 col-lg-5" id="fourth">
+                      <h5>Landing-page</h5>
+                      <p>Landing page - сайт, который продает. Разработаем сайт, который привлечет новых клиентов к вашей услуге, товару, событию. 
+                        <br>Стоимость от <span style="color:#f1c54b">300$</span>.</p>
+                      </div>
+
+                    </div>  <!--end row-->
+
+                    <div class="row" id="slide3Buttons">
+                      <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-1 text-center">
+                        <a href="#" class="a_button buttonPrice coast_popup_open">Расчитать</a>
+                      </div>
+
+                      <div class="col-sm-3 col-xs-5 col-md-2 col-lg-2 text-center">
+                        <a href="#4rdSection" class="a_button buttonPrice btn_next" id="next2">Далее</a>
                       </div>
                     </div>  <!--end row-->
 
@@ -324,7 +345,7 @@
                     <image src="images/Popup_callback/logo.png" class="logo_popup"></image>
                   </div>
                   <div class="content_popup" style="text-align: center;color:black; font-size: 24px;
-                  font-family: 'Roboto Medium' !important; line-height: normal;" >
+                  font-family: 'Roboto'; line-height: normal;" >
                   <span style="display: inline-block;"><i class="fa fa-phone" aria-hidden="true"></i>+375(25)925-13-54</span>
                   <form id="coast_form">
                     <select name="type">
@@ -368,7 +389,7 @@
                     </div>
                     <div class="element"></div>
                     <p id="result"></p>
-                    <button class="coastButton_popup SubmitFormButton2" id="btnCalculate" type="button">Расчитать</button>
+                    <button class="coastButton_popup " id="btnCalculate" type="button">Расчитать</button>
                   </form>
                 </div>
                 <button class="coast_popup_close"><i class="fa fa-times" aria-hidden="true"></i></button>
@@ -378,140 +399,178 @@
             </section>
 
 
-            <section id="section3" class="section">
-              <!--Портфолио-->
-            </section>
+           <!-- <section id="section3" class="section">
+             
+         </section> -->
 
-            <section id="section4" class="section">
+         <section id="section4" class="section">
 
-              <div class="container-fluide">
-                <div class="row">
-                  <div class="col-lg-5 col-lg-offset-1 col-md-6 text-center">
-                    <div class="angle-background text-center">
-                      <span class="title_3s">Заказывай дешевле</span>
-                      <div style="height: 200px; margin: 30px 20px 30px 20px;">
-                        <div class="right_text">
-                          При заказе 
-                          <br>
-                          <a href="#">полного пакета
-                            <br>
-                            услуг</a> скидка в 10%
-                          </div>
-                          <div class="ten_square sandbox_color">
-                            10%
-                          </div>
-                        </div>
-                      </div>
+          <div class="container-fluide">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-md-offset-1 col-lg-offset-1 text-center">
+                <div class="angle-background text-center">
+                  <span class="title_3s">Заказывай дешевле</span>
+                  <div style="margin: 30px 20px 30px 20px">
+                    <div class="ten_square sandbox_color">
+                      10%
                     </div>
-                    <div class="col-lg-5 col-md-6 text-center">
-                      <form id="callback_form" class="callback_form_main" method="POST" name="callback_from">
-                        <input name="name" id="callbackName" maxlength="40" placeholder="Имя" required />
-                        <input name="phone" type="phone" id="callbackPhone" maxlength="40" placeholder="Телефон" required />
-                        <div>
-                          <textarea name="body" id="callbackBody" maxlength="200" placeholder="Сообщение" required></textarea>
-                        </div>
-                        <button class="callbackButton btn_eff"  type="submit" form="callback_form"><span>Совершить заказ</span></button>
-                      </form>
+                    <div class="right_text">
+                      При заказе 
+                      <br>
+                      <a href="#" id="tooltip" data-toggle="tooltip" data-placement="bottom" title="Дизайн, API, SEO и т.д.">полного пакета
+                        <br>
+                        услуг</a> скидка в 10%
+                      </div>
+
                     </div>
                   </div>
                 </div>
-
-
-              </section>
-
-              <section id="section5" class="section">
-
-                <div class="container-fluide">
-                  <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                      <div class="title_4s">
-                        <h2 style="padding-top: 30px;">
-                          <span class="upper sandbox_color">
-                            sandbox development
-                          </span>
-                          <br>
-                          <span style="display: inline-block; padding-top:10px;">
-                            Молодая компания, которая предоставляет полный спектр услуг по профессиональной разработке web приложений, а также сайтов любого уровня сожности и комплексному продвежению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение  потребностей наших клиентов, высокое качество разработки и дизайна, а также эффективное ведение рекламынх компаний.
-                          </span>
-                        </h2>   
-                        <div id="callback_btn_2" class="button_style text-center ">
-                          <a href="#" class="a_button callback_popup_open btn_eff" data-popup-ordinal="0" id="open_98128074"><span>Связаться с нами</span></a>
-                        </div>
-                      </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                  <form id="callback_form" class="callback_form_main" method="POST" name="callback_from">
+                    <input name="name" id="callbackName" maxlength="40" placeholder="Имя" required />
+                    <input name="phone" type="phone" id="callbackPhone" maxlength="40" placeholder="Телефон" required />
+                    <div>
+                      <textarea name="body" id="callbackBody" maxlength="200" placeholder="Сообщение" required></textarea>
                     </div>
-                  </div>
+                    <button class="callbackButton SubmitFormButton3"  type="submit" form="callback_form"><span>Совершить заказ</span></button>
+                  </form>
                 </div>
+              </div>
+            </div>
 
-              </section>
 
-              <section id="section6" class="section">
+          </section>
 
-                <div class="container-fluide">
-                  <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1 text-center">
-                     <form id="callback_form_main" method="POST" name="callback_from">
-                      <input name="name" id="callbackName_main" maxlength="40" placeholder="Имя" required />
-                      <input name="phone" type="phone" id="callbackPhone_main" maxlength="40" placeholder="Телефон" required />
-                      <div>
-                        <textarea name="body" id="callbackBody_main" maxlength="200" placeholder="Сообщение" required></textarea>
-                      </div>
-                      <button class="SubmitFormButton SubmitFormButtonHover" type="submit" form="callback_form_main"><span>Отправить</span></button>
-                    </form>
+          <section id="section5" class="section">
+
+            <div class="container-fluide">
+              <div class="row">
+                <div class=" col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+                  <div class="title_4s">
+                    <h2 style="padding-top: 30px;">
+                      <span class="upper sandbox_color" id="section5Header">
+                        sandbox development
+                      </span>
+                      <br>
+                      <span style="display: inline-block; padding-top:10px;" id="section5Text">
+                        Мы молодая компания, которая любит свое дело и делает его хорошо. Наша компания предоставляет полный спектр услуг по профессиональной разработке сайтов любого уровня сложности и комплексному продвижению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение потребностей наших клиентов а также высокое качество разработки и дизайна.
+                      </span>
+                    </h2>   
+                    <div id="callback_btn_2" class="button_style text-center ">
+                      <a href="#" class="a_button callback_popup_open btn_eff" data-popup-ordinal="0" id="open_98128074"><span>Связаться с нами</span></a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="footer">
-               <div class="contacts text-center">
-                 <span style="margin-right: 20px;">
-                   <span class="right_border sandbox_color">
-                     почта
-                   </span>
-                   <span>
-                     hello@sandboxdev.by
-                   </span>
-                 </span>
-                 <span class="right_border sandbox_color">
-                   телефон
-                 </span>
-                 <span class="right_border">+375 25 791 65 57</span>
-                 <span>+375 25 925 13 54</span>
-               </div>
-               <div class="copyright text-center color_sandbox">
-                 <span style="text-transform: uppercase; font-size: 12px;" class="sandbox_color">
-                   &copysandbox development 2016
-                 </span>
-               </div>
-             </div>
+            </div>
 
-           </section>
+          </section>
 
-         </section>
+          <section id="section6" class="section">
 
-         <!--Jquery-->
-         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+            <div class="container-fluide">
+              <div class="row">
+                <div class=" col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 text-center">
+                 <form id="callback_form_main" method="POST" name="callback_from">
+                  <input name="name" id="callbackName_main" maxlength="40" placeholder="Имя" required />
+                  <input name="phone" type="phone" id="callbackPhone_main" maxlength="40" placeholder="Телефон" required />
+                  <div>
+                    <textarea name="body" id="callbackBody_main" maxlength="200" placeholder="Сообщение" required></textarea>
+                  </div>
+                  <button class="SubmitFormButton SubmitFormButtonHover" type="submit" form="callback_form_main"><span>Отправить</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class=" row footer">
+           <div class="contacts text-center">
+             <span style="margin-right: 20px;">
+               <span class="right_border sandbox_color">
+                 почта
+               </span>
+               <span>
+                 <a href="mailto:hello@sandboxdev.by">hello@sandboxdev.by</a>
+               </span>
+             </span>
+             <br>
+             <span class="right_border sandbox_color">
+               телефон
+             </span>
+             <span ><a class="right_border" href="tel:+375259251354">+375 25 791 65 57</a></span>
+             <span><a href="tel:+375259251354">+375 25 925 13 54</a></span>
+           </div>
+           <div class="copyright text-center color_sandbox">
+             <span style="text-transform: uppercase; font-size: 12px;" class="sandbox_color">
+               &copysandbox development 2016
+             </span>
+           </div>
+         </div>
 
-         <!--Bootstrap-->
-         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+       </section>
 
-         <!--LightCase-->
-         <script src="bower_components/lightcase/src/js/lightcase.js"></script>
-         <script src="bower_components/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
+     </section>
+
+     <!--Jquery-->
+     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+     <!--Bootstrap-->
+     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+     <!--LightCase-->
+     <script src="bower_components/lightcase/src/js/lightcase.js"></script>
+     <script src="bower_components/lightcase/vendor/jQuery/jquery.events.touch.js"></script>
 
 
-         <!--JQUERY VALID-->
-         <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+     <!--JQUERY VALID-->
+     <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
 
-         <!--FULLPAGE-->
-         <script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+     <!--FULLPAGE-->
+     <script src="bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
 
-         <!--SLIMSCROLL-->
-         <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+     <!--SLIMSCROLL-->
+     <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 
-         <!-- PARALLAX -->
-         <script src="js/parallax.min.js"></script>
-         <script src="js/libs.js"></script>
-         <script src="js/jquery.popupoverlay.js"></script>
-         
+     <!-- PARALLAX -->
+     <script src="js/parallax.min.js"></script>
+     <script src="js/libs.js"></script>
+     <script src="js/jquery.popupoverlay.js"></script>
 
-</body>
-</html>
+     <!-- Yandex.Metrika informer -->
+     <a href="https://metrika.yandex.ru/stat/?id=38773300&amp;from=informer"
+     target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/38773300/3_0_FFFFFFFF_FFFFFFFF_0_uniques"
+     style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" /></a>
+     <!-- /Yandex.Metrika informer -->
+
+     <!-- Yandex.Metrika counter -->
+     <script type="text/javascript">
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+          try {
+            w.yaCounter38773300 = new Ya.Metrika({
+              id:38773300,
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true
+            });
+          } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/38773300" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+
+  </body>
+  </html>

@@ -1,0 +1,207 @@
+/*первая секция*/
+
+#title_1s{
+	opacity: 0;
+	-webkit-animation-duration: 1s;
+
+}
+
+#buttons_1s{
+	opacity: 0;
+	-webkit-animation-delay: .6s;
+}
+
+#callback_block{
+	opacity: 0;
+	-webkit-animation-delay: .8s;
+}
+
+/*вторая секция, первй слайд*/
+#firstSlideHeader{
+		opacity: 0;
+}
+
+#serviseDiv {
+		opacity: 0;
+		-webkit-animation-delay: .4s;
+}
+
+#slide1 a[href="#"]{
+		opacity: 0;
+		-webkit-animation-delay: 1s;
+}
+
+
+
+/*вторая секция, второй слайд*/
+
+
+#slider2Header{
+	opacity: 0;
+
+}
+
+
+.bg_steps{
+	opacity: 0;
+}
+
+.icon_1{
+	opacity: 0;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-duration: .5s;
+
+}
+
+.icon_2{
+	opacity: 0;
+	-webkit-animation-delay: .6s;
+	-webkit-animation-duration: .5s;
+
+}
+
+.icon_3{
+	opacity: 0;
+	-webkit-animation-delay: .9s;
+	-webkit-animation-duration: .5s;
+
+}
+
+.icon_4{
+	opacity: 0;
+	-webkit-animation-delay: 1.2s;
+	-webkit-animation-duration: .5s;
+
+}
+
+.icon_5{
+	opacity: 0;
+	-webkit-animation-delay: 1.5s;
+	-webkit-animation-duration: .5s;
+
+}
+
+
+.icon_6{
+	opacity: 0;
+	-webkit-animation-delay: 1.8s;
+	-webkit-animation-duration: .5s;
+
+}
+
+/*вторая секция, третий слайд*/
+
+
+#slide3Header{
+	opacity: 0;
+}
+
+#first{
+	opacity: 0;
+	-webkit-animation-delay: .2s;
+}
+
+#second{
+	opacity: 0;
+	-webkit-animation-delay: .4s;
+
+}
+
+#third{
+	opacity: 0;
+	-webkit-animation-delay: .8s;
+
+}
+
+#fourth{
+	opacity: 0;
+	-webkit-animation-delay: 1.2s;
+
+}
+
+#slide3Buttons{
+	opacity: 0;
+	-webkit-animation-delay: 1.6s;
+}
+
+/*секция 4*/
+
+.title_3s{
+	opacity: 0;
+}
+
+.right_text{
+	opacity: 0;
+	-webkit-animation-delay: .2s;
+}
+
+.ten_square{
+	opacity: 0;
+	-webkit-animation-delay: .4s;
+}
+
+#callbackName{
+	opacity: 0;
+	-webkit-animation-delay: .6s;
+
+}
+
+#callbackPhone{
+	opacity: 0;
+	-webkit-animation-delay: .8s;
+
+}
+
+#callbackBody{
+	opacity: 0;
+	-webkit-animation-delay: 1s;
+
+}
+
+.callbackButton{
+	opacity: 0;
+	-webkit-animation-delay: 1.2s;
+
+}
+
+
+/*секция 5*/
+#section5Header{
+	opacity: 0;
+
+}
+
+#section5Text{
+	opacity: 0;
+	-webkit-animation-delay: 0.2s;
+}
+
+#callback_btn_2{
+	opacity: 0;
+	-webkit-animation-delay: 0.4s;
+}
+
+/*секция 5*/
+#callbackName_main{
+	opacity: 0;
+}
+
+#callbackPhone_main{
+	opacity: 0;
+	-webkit-animation-delay: 0.2s;
+}
+
+#callbackBody_main{
+	opacity: 0;
+	-webkit-animation-delay: .4s;
+}
+
+.SubmitFormButton{
+	opacity: 0;
+	-webkit-animation-delay: .6s;
+}
+
+.footer{
+	opacity: 0;
+	-webkit-animation-delay: .8s;
+}

@@ -1,0 +1,7 @@
+Host: http://www.sandboxdev.by
+Sitemap: http://www.sandboxdev.by/sitemap.xml
+
+User-agent: *
+Disallow: /bower_components/
+Disallow: /images/
+Disallow: /fonts/
