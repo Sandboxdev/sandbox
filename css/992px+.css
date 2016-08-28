@@ -1290,7 +1290,7 @@ backface-visibility: hidden;
 #callback_form_popup input:focus 
 {
 	outline: none;
-	border: 2px solid white;
+	border: 2px solid #989696;
 }
 
 
@@ -1482,12 +1482,12 @@ backface-visibility: hidden;
  #coast_form select:focus
  {
  	outline: none;
- 	border: 2px solid white;
+ 	border: 2px solid #989696;
  }
 
  #coast_form select option {
 	outline: none;
- 	border: 2px solid white;
+ 	border: 2px solid #989696;
  }
 
  /*Стили для кнопки*/
