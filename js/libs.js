@@ -257,20 +257,19 @@ $('#togler-button').click(function(){
         }
     });
 
-    /*COAST_POPUP*/
+   /*COAST_POPUP*/
     var prices = new Object();
-    prices.design = 50;
     prices.brending = 50;
-    prices.mlang = 50;
-    prices.seo = 100;
-    prices.socapi = 50;
-    prices.logo = 50;
+    prices.mlang = 20;
+    prices.seo = 50;
+    prices.socapi = 20;
+    prices.logo = 30;
 
     var typeCoast = new Object();
-    typeCoast.portals_and_service = 700;
-    typeCoast.shop = 500;
-    typeCoast.cutaway = 250;
-    typeCoast.landing = 300;
+    typeCoast.portals_and_service = 350;
+    typeCoast.shop = 200;
+    typeCoast.cutaway = 120;
+    typeCoast.landing = 100;
 
     var coast = 0;
 
@@ -278,6 +277,20 @@ $('#togler-button').click(function(){
     $('#btnCalculate').click(function(){
 
         var elements = document.forms["coast_form"].elements;
+
+        switch(elements.type.value)
+        {
+            case 'portals_and_service':
+            case 'shop':
+            prices.design = 150;
+            break;
+            case 'cutaway':
+            prices.design = 120;
+            break; 
+            case 'landing':
+            prices.design = 100;
+            break;
+        }
 
         if(elements.design.checked)
             coast += prices.design;
@@ -333,7 +346,7 @@ $('#togler-button').click(function(){
         }
     }
 
-    //multilang
+    /*multilang*/
 
     var curLang = 0;
 
@@ -355,11 +368,11 @@ $('#togler-button').click(function(){
     ["Отправить", "Send"],
     ["Наши услуги", "Our services"],
     ["Создание сайтов - это то, что мы умеем. В основу наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво» просто так — мы делаем «красиво», которое зарабатывает вам деньги.",
-    "Website Design - this is what we can do. Meeting the objectives is the basis of our solutions. We never do \"beautifully\" for no particular reason, we do \"beautifully\", which brings you money."],
+    "Website Design - this is what we are really good at. Meeting the objectives is our main aim at every project. We never do something \"beautiful\" just to be \"beautiful\". We do so that \"beautifull\" will bring you money."],
     ["Веб-разработка", "Web-development"],
     ["Сайт-визитка", "Website card"],
     ["Интернет-магазины", "Online shops"],
-    ["Порталы", "Informational Websites"],
+    ["Порталы", "Portals"],
     ["Сервисы", "Web-services"],
     ["Дизайн", "Design"],
     ["Прототипы", "Prototypes"],
@@ -395,9 +408,9 @@ $('#togler-button').click(function(){
     ["полного пакета", "full package"],
     ["услуг", "of"],
     ["скидка в 10%", " services"],
-    ["Совершить заказ", "To order"],
+    ["Совершить заказ", "Order now"],
     ["Мы молодая компания, которая любит свое дело и делает его хорошо. Наша компания предоставляет полный спектр услуг по профессиональной разработке сайтов любого уровня сложности и комплексному продвижению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение потребностей наших клиентов а также высокое качество разработки и дизайна.",
-    "We are a young company , who loves his job and does it well. Our company provides a full range of services in professional development of sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design."],
+    "We are a young company and we love what we do and we do it well. Our company provides a full range of services in professional development of sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design."],
     ["почта", "mail"],
     ["телефон", "phone"],
     ["Заказать звонок", "Order a call"],
@@ -427,12 +440,12 @@ $('#togler-button').click(function(){
     ["Contact us", "Связаться с нами"],
     ["Send", "Отправить"],
     ["Our services", "Наши услуги"],
-    ["Website Design - this is what we can do. Meeting the objectives is the basis of our solutions. We never do \"beautifully\" for no particular reason, we do \"beautifully\", which brings you money.",
+    ["Website Design - this is what we are really good at. Meeting the objectives is our main aim at every project. We never do something \"beautiful\" just to be \"beautiful\". We do so that \"beautifull\" will bring you money.",
     "Создание сайтов - это то, что мы умеем. В основу наших решений всегда заложено выполнение задач. Мы никогда не делаем «красиво» просто так — мы делаем «красиво», которое зарабатывает вам деньги."],
     ["Web-development", "Веб-разработка"],
     ["Website card", "Сайт-визитка"],
     ["Online shops", "Интернет-магазины"],
-    ["Informational Websites", "Порталы"],
+    ["Portals", "Порталы"],
     ["Web-services", "Сервисы"],
     ["Design", "Дизайн"],
     ["Prototypes", "Прототипы"],
@@ -443,7 +456,7 @@ $('#togler-button').click(function(){
     ["Promotion", "Продвижение"],
     ["Contextual", "Контекстная"],
     ["advertising", "реклама"],
-    ["To order", "Заказать"],
+    ["Order now", "Заказать"],
     ["Stages of project development", "Этапы разработки проекта"],
     ["We act as a single well co-ordinated mechanism during the whole process of work, which enables us to find effective solutions and realize the goals for any business industry.",
     "Мы действуем как единый, слаженный механизм на протяжении всего процесса работы, что позволяет нам эффективно создавать решения и реализовывать самые сложные задачи для любой индустрии бизнеса."],
@@ -469,7 +482,7 @@ $('#togler-button').click(function(){
     ["of", "услуг"],
     ["services", " скидка в 10%"],
     ["To order", "Совершить заказ"],
-    ["We are a young company , who loves his job and does it well. Our company provides a full range of services in professional development of sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design.",
+    ["We are a young company and we love what we do and we do it well. Our company provides a full range of services in professional development of sites of any level of complexity, integrated promotion on the Internet using the most advanced technologies. In our work we focus on meeting the needs of our customers, high quality of development and design.",
     "Мы молодая компания, которая любит свое дело и делает его хорошо. Наша компания предоставляет полный спектр услуг по профессиональной разработке сайтов любого уровня сложности и комплексному продвижению в интернете, с использованием самых передовых технологий. В своей работе мы ориентируемся прежде всего на удовлетворение потребностей наших клиентов а также высокое качество разработки и дизайна."],
     ["mail", "почта"],
     ["phone", "телефон"],
